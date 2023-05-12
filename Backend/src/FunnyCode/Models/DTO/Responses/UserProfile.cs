@@ -10,7 +10,6 @@ public class UserProfile
     public int Age { get; set; }
     public string Email { get; set; }
     public string PhoneNumber { get; set; }
-    //TODO: переделать связь роли и пользователя
     public string WorkAdress { get; set; }
     public string inTeamRole { get; set; }
     public string inProjectRole { get; set; }
