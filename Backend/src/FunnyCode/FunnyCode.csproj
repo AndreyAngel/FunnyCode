@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Models\DTO\Requests\" />
-    <Folder Include="Models\DTO\Responses\" />
   </ItemGroup>
 
 </Project>

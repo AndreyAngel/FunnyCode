@@ -1,7 +1,9 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
 
-public class Event : BaseEntity
+public class EventDTOResponse
 {
+    public Guid Id { get; set; }
+
     public string Name { get; set; }
 
     public string? Description { get; set; }
@@ -10,7 +12,8 @@ public class Event : BaseEntity
 
     public string Location { get; set; }
 
-    public List<Subdivision> Subdivisions { get; set; } = new();
+    public List<SubdivisionDTOResponse> Subdivisions { get; set; } = new();
 
-    public List<Division> Divisions { get; set; } = new();
+    public List<DivisionDTOResponse> Divisions { get; set; } = new();
+
 }

@@ -1,22 +1,24 @@
-﻿using System.Diagnostics.Contracts;
+﻿namespace FunnyCode.Domain.Core.Entities;
 
-namespace FunnyCode.Domain.Core.Entities;
-
-public class UserProfile
+public class UserProfile : BaseEntity
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
-    public string IsAvailable { get; set; }
-    public int Age { get; set; }
-    public string Email { get; set; }
-    public string PhoneNumber { get; set; }
-    //TODO: переделать связь роли и пользователя
-    public string WorkAdress { get; set; }
-    public string inTeamRole { get; set; }
-    public string inProjectRole { get; set; }
-    public Guid TeamId { get; set; }
 
-    public Team? Team { get; set; }
-    
+    public string Surname { get; set; }
 
+    public DateOnly BirthDate { get; set; }
+
+    public Guid ContactsId { get; set; }
+
+    public Contacts? Contacts { get; set; }
+
+    public Guid WorkSpaceId { get; set; }
+
+    public WorkSpace? WorkSpace { get; set; }
+
+    public Guid ScheduleId { get; set; }
+
+    public Schedule? Schedule { get; set; }
+
+    public List<Vacation> Vacations { get; set; }
 }
