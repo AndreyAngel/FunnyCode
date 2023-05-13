@@ -12,5 +12,5 @@ public class Subdivision : BaseEntity
 
     public List<Team> Teams { get; set; } = new();
 
-    public List<Event> Events { get; set; } = new();
+    public List<UserProfile> Users { get; set; } = new();
 }

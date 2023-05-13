@@ -2,4 +2,11 @@
 
 public enum RoleInProject
 {
+    BackDeveloper,
+
+    FrontDeveloper,
+
+    TeamLead,
+
+    Designer
 }

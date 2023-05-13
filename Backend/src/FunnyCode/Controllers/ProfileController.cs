@@ -12,14 +12,14 @@ public class ProfileController: ControllerBase
         throw new NotImplementedException();
     }
 
-    [HttpPut("{id:Guid}")]
-    public IActionResult Update(Guid id)
+    [HttpGet("{name}")]
+    public IActionResult GetByName(string name)
     {
         throw new NotImplementedException();
     }
 
-    [HttpDelete("{id:Guid}")]
-    public IActionResult Delete(Guid id)
+    [HttpPut("{id:Guid}")]
+    public IActionResult Update(Guid id)
     {
         throw new NotImplementedException();
     }

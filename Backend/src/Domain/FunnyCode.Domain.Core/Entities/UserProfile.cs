@@ -4,8 +4,6 @@ public class UserProfile : BaseEntity
 {
     public string Name { get; set; }
 
-    public string Surname { get; set; }
-
     public DateOnly BirthDate { get; set; }
 
     public Guid ContactsId { get; set; }

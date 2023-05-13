@@ -6,7 +6,11 @@ public class Division : BaseEntity
 
     public string? Description { get; set; }
 
-    public List<Subdivision> Subdivisions { get; set; } = new();
+    public Guid LeaderId { get; set; }
 
-    public List<Event> Events { get; set; } = new();
+    public UserProfile? Leader { get; set; }
+
+    public List<Subdivision> Subdivisions { get; set; } = new();
+    
+    public List<UserProfile> Users { get; set; } = new();
 }
