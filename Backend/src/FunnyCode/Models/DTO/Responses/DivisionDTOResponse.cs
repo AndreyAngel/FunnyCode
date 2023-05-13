@@ -1,4 +1,5 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
+
 /// <summary>
 /// Response information for division request
 /// </summary>
