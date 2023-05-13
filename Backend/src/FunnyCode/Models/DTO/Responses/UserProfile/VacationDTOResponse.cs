@@ -1,10 +1,10 @@
 ﻿using FunnyCode.Models.DTO.Enums;
 
-namespace FunnyCode.Models.DTO.Responses;
+namespace FunnyCode.Models.DTO.Responses.UserProfile;
 /// <summary>
 /// Response information for specific user vacation info request
 /// </summary>
-public class VacationDTOResponse 
+public class VacationDTOResponse
 {
     public DateOnly StartData { get; set; }
 

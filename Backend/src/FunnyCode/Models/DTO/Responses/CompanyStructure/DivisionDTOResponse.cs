@@ -1,4 +1,7 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿using FunnyCode.Models.DTO.Responses.UserProfile;
+
+namespace FunnyCode.Models.DTO.Responses.CompanyStructure;
+
 /// <summary>
 /// Response information for division request
 /// </summary>
@@ -8,7 +11,7 @@ public class DivisionDTOResponse
 
     public string? Description { get; set; }
 
-    public List<SubDivisionsListDTOResponse> Subdivisions { get; set; } = new();
+    public List<SubdivisionListDTOResponse> Subdivisions { get; set; } = new();
 
     public UserProfileDTOResponse? Leader { get; set; }
 

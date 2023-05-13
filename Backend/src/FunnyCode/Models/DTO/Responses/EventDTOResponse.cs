@@ -1,4 +1,6 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿using FunnyCode.Models.DTO.Responses.CompanyStructure;
+
+namespace FunnyCode.Models.DTO.Responses;
 /// <summary>
 /// Response information for specific event request
 /// </summary>

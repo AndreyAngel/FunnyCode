@@ -10,4 +10,6 @@ public interface IUserProfileService : IDisposable
     List<UserProfile> GetByName(string name);
 
     List<UserProfile> GetByFilters(UserFiltersModel filters);
+
+    UserProfile Update(UserProfile user);
 }

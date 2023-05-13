@@ -1,4 +1,6 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿using FunnyCode.Models.DTO.Responses.CompanyStructure;
+
+namespace FunnyCode.Models.DTO.Responses.Project;
 /// <summary>
 /// Response information for specific project request
 /// </summary>
@@ -12,7 +14,7 @@ public class ProjectDTOResponse
 
     public DateOnly EndDate { get; set; }
 
-    public List<TaskDTOResponse> Tasks { get; set; }
+    public List<TaskDTOResponse> Tasks { get; set; } = new();
 
-    public List<TeamDTOResponse> Teams { get; set; } = new();
+    public List<DivisionListDTOResponse> Divisions { get; set; } = new();
 }

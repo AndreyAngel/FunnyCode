@@ -15,4 +15,6 @@ public class Division : BaseEntity
     public List<Subdivision> Subdivisions { get; set; } = new();
     
     public List<UserProfile> Users { get; set; } = new();
+
+    public List<Project> Projects { get; set; } = new();
 }

@@ -1,8 +1,10 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿using FunnyCode.Models.DTO.Responses.UserProfile;
+
+namespace FunnyCode.Models.DTO.Responses.Project;
 /// <summary>
 /// Response information for specific task request
 /// </summary>
-public class TaskDTOResponse 
+public class TaskDTOResponse
 {
     public string Name { get; set; }
 

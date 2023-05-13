@@ -1,4 +1,4 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿namespace FunnyCode.Models.DTO.Responses.CompanyStructure;
 /// <summary>
 /// Response information for team list request
 /// </summary>

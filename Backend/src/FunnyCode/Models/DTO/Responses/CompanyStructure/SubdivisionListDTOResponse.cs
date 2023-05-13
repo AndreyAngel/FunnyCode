@@ -2,7 +2,7 @@
 /// <summary>
 /// Response information for subdivisions list request
 /// </summary>
-public class SubDivisionsListDTOResponse: BaseEntityDTOResponse
+public class SubdivisionListDTOResponse: BaseEntityDTOResponse
 {
     public string Name { get; set; }
 }
