@@ -13,7 +13,7 @@ public class DivisionDTOResponse
 
     public List<SubdivisionListDTOResponse> Subdivisions { get; set; } = new();
 
-    public UserProfileDTOResponse? Leader { get; set; }
+    public UserProfileListDTOResponse? Leader { get; set; }
 
     public List<UserProfileListDTOResponse> Users { get; set; } = new();
 }

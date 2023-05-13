@@ -11,8 +11,8 @@ public class TeamDTOResponse
 
     public List<UserProfileListDTOResponse> Users { get; set; } = new();
 
-    public UserProfileDTOResponse Leader { get; set; }
+    public UserProfileListDTOResponse Leader { get; set; }
 
-    public ProjectDTOResponse? Project { get; set; }
+    public ProjectListDTOResponse? Project { get; set; }
 
 }

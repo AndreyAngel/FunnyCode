@@ -1,8 +1,8 @@
-﻿namespace FunnyCode.Models.DTO.Responses.CompanyStructure;
+﻿namespace FunnyCode.Models.DTO;
 /// <summary>
 /// Response information for adress request
 /// </summary>
-public class AddressDTOResponse
+public class AddressDTO
 {
     public string Region { get; set; }
 

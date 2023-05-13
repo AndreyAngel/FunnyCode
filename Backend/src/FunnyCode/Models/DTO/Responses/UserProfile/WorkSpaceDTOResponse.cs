@@ -8,7 +8,7 @@ namespace FunnyCode.Models.DTO.Responses.UserProfile;
 /// </summary>
 public class WorkSpaceDTOResponse
 {
-    public AddressDTOResponse? Address { get; set; }
+    public AddressDTO? Address { get; set; }
 
     public DivisionDTOResponse? Division { get; set; }
 
