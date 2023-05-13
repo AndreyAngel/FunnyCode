@@ -1,5 +1,8 @@
-﻿using FunnyCode.Models.DTO.Responses;
+﻿using AutoMapper;
+using FunnyCode.Models.DTO.Responses;
 using FunnyCode.Models.DTO.Responses.CompanyStructure;
+using FunnyCode.Services.Interfaces;
+using FunnyCode.Services.Interfaces.Exceptions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -10,6 +13,16 @@ namespace FunnyCode.Controllers;
 [ApiController]
 public class CompanyStructureController : ControllerBase
 {
+    private readonly ICompanyStructureService _companyStructureService;
+
+    private readonly IMapper _mapper;
+
+    public CompanyStructureController(ICompanyStructureService companyStructureService, IMapper mapper)
+    {
+        _companyStructureService = companyStructureService;
+        _mapper = mapper;
+    }
+
     /// <summary>
     /// Get all divisions
     /// </summary>
@@ -21,7 +34,10 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(List<DivisionListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetDivisions()
     {
-        throw new NotImplementedException();
+        var result = _companyStructureService.GetDivisions();
+        var response = _mapper.Map<List<DivisionListDTOResponse>>(result);
+
+        return Ok(response);
     }
 
     /// <summary>
@@ -37,7 +53,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetDivisionById(Guid id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetDivisionById(id);
+            var response = _mapper.Map<DivisionDTOResponse>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
     /// <summary>
@@ -53,7 +79,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetDivisionByName(string name)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetDivisionByName(name);
+            var response = _mapper.Map<DivisionDTOResponse>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
     /// <summary>
@@ -67,7 +103,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(List<SubdivisionListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetSubdivisions(Guid divisionId)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetSubdivisions(divisionId);
+            var response = _mapper.Map<List<SubdivisionListDTOResponse>>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
     /// <summary>
@@ -83,7 +129,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetSubdivisionById(Guid id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetSubdivisionById(id);
+            var response = _mapper.Map<SubdivisionDTOResponse>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
     /// <summary>
@@ -99,7 +155,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetSubdivisionByName(string name)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetSubdivisionByName(name);
+            var response = _mapper.Map<SubdivisionDTOResponse>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
     /// <summary>
@@ -113,7 +179,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(List<TeamListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetTeams(Guid subdivisionId)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetTeams(subdivisionId);
+            var response = _mapper.Map<List<TeamListDTOResponse>>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
 
@@ -130,7 +206,17 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetTeamById(Guid id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetTeamById(id);
+            var response = _mapper.Map<TeamDTOResponse>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 
     /// <summary>
@@ -146,6 +232,16 @@ public class CompanyStructureController : ControllerBase
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetTeamByName(string name)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var result = _companyStructureService.GetTeamByName(name);
+            var response = _mapper.Map<TeamDTOResponse>(result);
+
+            return Ok(response);
+        }
+        catch (NotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
     }
 }
