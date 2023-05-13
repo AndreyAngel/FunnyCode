@@ -1,6 +1,6 @@
 ﻿namespace FunnyCode.Domain.Interfaces;
 
-public interface IUnitOfWork
+public interface IUnitOfWork : IDisposable
 {
     public IDivisionRepository Divisions { get; }
 

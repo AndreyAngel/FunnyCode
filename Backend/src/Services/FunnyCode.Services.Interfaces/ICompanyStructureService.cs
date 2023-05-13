@@ -20,5 +20,5 @@ public interface ICompanyStructureService
 
     Team GetTeamById (Guid teamId);
 
-    Team GetByName(string name);
+    Team GetTeamByName(string name);
 }
