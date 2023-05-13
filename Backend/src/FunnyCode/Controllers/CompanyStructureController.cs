@@ -1,4 +1,5 @@
 ﻿using FunnyCode.Models.DTO.Responses;
+using FunnyCode.Models.DTO.Responses.CompanyStructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;

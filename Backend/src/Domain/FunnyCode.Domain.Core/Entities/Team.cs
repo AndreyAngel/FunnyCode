@@ -13,4 +13,6 @@ public class Team : BaseEntity
     public UserProfile Leader { get; set; }
 
     public List<UserProfile> Users { get; set; } = new();
+
+    public List<Project> Projects { get; set; } = new();
 }

@@ -1,4 +1,7 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿using FunnyCode.Models.DTO.Responses.Project;
+using FunnyCode.Models.DTO.Responses.UserProfile;
+
+namespace FunnyCode.Models.DTO.Responses.CompanyStructure;
 /// <summary>
 /// Response information for specific team request
 /// </summary>

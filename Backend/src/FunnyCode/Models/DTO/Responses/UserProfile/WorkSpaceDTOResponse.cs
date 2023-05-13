@@ -1,6 +1,8 @@
 ﻿using FunnyCode.Models.DTO.Enums;
+using FunnyCode.Models.DTO.Responses.CompanyStructure;
+using FunnyCode.Models.DTO.Responses.Project;
 
-namespace FunnyCode.Models.DTO.Responses;
+namespace FunnyCode.Models.DTO.Responses.UserProfile;
 /// <summary>
 /// Response information for specific user work space request
 /// </summary>

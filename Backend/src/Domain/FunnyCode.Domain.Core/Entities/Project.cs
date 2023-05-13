@@ -8,7 +8,7 @@ public class Project : BaseEntity
 
     public string? Description { get; set; }
 
-    public List<Team> Teams { get; set; } = new();
+    public List<Division> Divisions { get; set; } = new();
 
     public DateOnly StartDate { get; set; }
 

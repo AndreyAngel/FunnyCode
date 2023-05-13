@@ -1,4 +1,4 @@
-﻿namespace FunnyCode.Models.DTO.Responses;
+﻿namespace FunnyCode.Models.DTO.Responses.UserProfile;
 /// <summary>
 /// Helper class for schedule
 /// </summary>
