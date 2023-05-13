@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rocket.Chat.Net" Version="0.2.0.1" />
+    <PackageReference Include="Rocket.Chat.Net.Bot" Version="0.2.0.1" />
+  </ItemGroup>
+
+</Project>
