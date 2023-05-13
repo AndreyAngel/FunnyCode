@@ -1,8 +1,9 @@
 package com.example.funnyapp.data.model.response
 
+import com.example.funnyapp.data.model.ProjectSubdivision
+
 data class Project(
-    val Id: String,
-    val Name: String,
-    val Description: String,
-    val Teams: List<Team>
+    val id: String,
+    val name: String,
+    val subdivisions: List<ProjectSubdivision>
 )

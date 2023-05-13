@@ -1,8 +1,11 @@
 package com.example.funnyapp.data.model.response
 
+import com.example.funnyapp.data.model.Leader
+
 data class Division(
-    val Id: String,
-    val Name: String,
-    val Description: String,
-    val Subdivisions: List<Subdivision>
+    val name: String,
+    val description: String,
+    val subdivisions: List<Subdivisions>,
+    val leader: Leader,
+    val users: List<Users>
 )
