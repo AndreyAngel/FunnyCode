@@ -17,7 +17,7 @@ public class CompanyStructureController : ControllerBase
     /// <response code="401"> Unauthorized </response>
     [HttpGet]
     [Authorize(Policy = "ChangingOfCatalog")]
-    [ProducesResponseType(typeof(DivisionDTOResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(List<DivisionListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetDivisions()
     {
         throw new NotImplementedException();
@@ -63,7 +63,7 @@ public class CompanyStructureController : ControllerBase
     /// <response code="200"> Successful completion </response>
     /// <response code="401"> Unauthorized </response>
     [HttpGet("{divisionId:Guid}")]
-    [ProducesResponseType(typeof(SubdivisionDTOResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(List<SubdivisionListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetSubdivisions(Guid divisionId)
     {
         throw new NotImplementedException();
@@ -109,7 +109,7 @@ public class CompanyStructureController : ControllerBase
     /// <response code="200"> Successful completion </response>
     /// <response code="401"> Unauthorized </response>
     [HttpGet("{subdivisionId:Guid}")]
-    [ProducesResponseType(typeof(TeamDTOResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(List<TeamListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetTeams(Guid subdivisionId)
     {
         throw new NotImplementedException();

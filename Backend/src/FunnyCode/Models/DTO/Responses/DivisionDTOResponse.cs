@@ -9,7 +9,7 @@ public class DivisionDTOResponse
 
     public string? Description { get; set; }
 
-    public List<SubDivisionsListDTOResponse> Subdivisions { get; set; } = new();
+    public List<SubdivisionListDTOResponse> Subdivisions { get; set; } = new();
 
     public UserProfileDTOResponse? Leader { get; set; }
 
