@@ -12,10 +12,6 @@ public class Subdivision : BaseEntity
 
     public string Description { get; set; }
 
-    public Guid LeaderId { get; set; }
-
-    public UserProfile? Leader { get; set; }
-
     public Guid DivisionId { get; set; }
 
     public Division? Division { get; set; }

@@ -85,10 +85,10 @@ public class ProfileRepository : IProfileRepository
                     {
                         Id= new Guid(),
                         City = "City",
-                        Region = "",
-                        NumberOfHome = "",
-                        PostalCode = "",
-                        Street = ""
+                        Region = "Tomsker",
+                        NumberOfHome = "12",
+                        PostalCode = "PScode",
+                        Street = "Street"
                     },
                     AddressId= new Guid(),
                     Division = new Division { 
@@ -102,13 +102,29 @@ public class ProfileRepository : IProfileRepository
                             ScheduleId = new Guid()
                         },
                         LeaderId= new Guid(),
-                        Name = "",
+                        Name = "DivisionName",
                        
+                    },
+                    Subdivision = new Subdivision
+                    {
+                        Id =new Guid(),
+                        LeaderId = new Guid(),
+                        DivisionId = new Guid(),
+                        Name = "SubdivisionName",
+                    },
+                    DivisionId= new Guid(),
+                    SubdivisionId= new Guid(),
+                    Team = new Team
+                    {
+                        Id = new Guid(),
+                        ProjectId = new Guid(),
+                        SubdivisionId = new Guid(),
+                        Name = "TeamName",
                     }
                     
-                }
+                },
 
-            }
+            },
             new UserProfile()
             {
                 Name = "Mike",
@@ -133,10 +149,10 @@ public class ProfileRepository : IProfileRepository
                     {
                         Id= new Guid(),
                         City = "City",
-                        Region = "",
-                        NumberOfHome = "",
-                        PostalCode = "",
-                        Street = ""
+                        Region = "Tomsker",
+                        NumberOfHome = "12",
+                        PostalCode = "PScode",
+                        Street = "Street"
                     },
                     AddressId= new Guid(),
                     Division = new Division {
@@ -150,13 +166,29 @@ public class ProfileRepository : IProfileRepository
                             ScheduleId = new Guid()
                         },
                         LeaderId= new Guid(),
-                        Name = "",
+                        Name = "DivisionName",
 
+                    },
+                    Subdivision = new Subdivision
+                    {
+                        Id =new Guid(),
+                        LeaderId = new Guid(),
+                        DivisionId = new Guid(),
+                        Name = "SubdivisionName",
+                    },
+                    DivisionId= new Guid(),
+                    SubdivisionId= new Guid(),
+                    Team = new Team
+                    {
+                        Id = new Guid(),
+                        ProjectId = new Guid(),
+                        SubdivisionId = new Guid(),
+                        Name = "TeamName",
                     }
 
-                }
+                },
 
-            }
+            },
             new UserProfile()
             {
                 Name = "Mike",
@@ -181,10 +213,10 @@ public class ProfileRepository : IProfileRepository
                     {
                         Id= new Guid(),
                         City = "City",
-                        Region = "",
-                        NumberOfHome = "",
-                        PostalCode = "",
-                        Street = ""
+                        Region = "Tomsker",
+                        NumberOfHome = "12",
+                        PostalCode = "PScode",
+                        Street = "Street"
                     },
                     AddressId= new Guid(),
                     Division = new Division {
@@ -198,13 +230,31 @@ public class ProfileRepository : IProfileRepository
                             ScheduleId = new Guid()
                         },
                         LeaderId= new Guid(),
-                        Name = "",
+                        Name = "DivisionName",
 
-                    }
+                    },
+                    Subdivision = new Subdivision
+                    {
+                        Id =new Guid(),
+                        LeaderId = new Guid(),
+                        DivisionId = new Guid(),
+                        Name = "SubdivisionName",
+                    },
+                    DivisionId= new Guid(),
+                    SubdivisionId= new Guid(),
+                    Team = new Team
+                    {
+                        Id = new Guid(),
+                        ProjectId = new Guid(),
+                        SubdivisionId = new Guid(),
+                        Name = "TeamName",
+                    },
+                    TeamId= new Guid(),  
 
-                }
+                },
 
-            }
+            },
+
         };
     }
 
