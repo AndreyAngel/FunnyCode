@@ -7,16 +7,16 @@ namespace FunnyCode.Infrastructure.Buisness;
 
 public class CompanyStructureService : ICompanyStructureService
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly IUnitOfWork _db;
 
     public CompanyStructureService(IUnitOfWork unitOfWork)
     {
-        _unitOfWork = unitOfWork;
+        _db = unitOfWork;
     }
 
     public Division GetDivisionById(Guid id)
     {
-        var devision = _unitOfWork.Divisions.Include(x => x.Leader)
+        var devision = _db.Divisions.Include(x => x.Leader)
                                             .SingleOrDefault(x => x.Id == id);
 
         if (devision == null)
@@ -29,7 +29,7 @@ public class CompanyStructureService : ICompanyStructureService
 
     public Division GetDivisionByName(string name)
     {
-        var division = _unitOfWork.Divisions.Include(x => x.Leader)
+        var division = _db.Divisions.Include(x => x.Leader)
                                             .SingleOrDefault(x => x.Name == name);
 
         if (division == null)
@@ -42,12 +42,12 @@ public class CompanyStructureService : ICompanyStructureService
 
     public List<Division> GetDivisions()
     {
-        return _unitOfWork.Divisions.GetAll();
+        return _db.Divisions.GetAll();
     }
 
     public Subdivision GetSubdivisionById(Guid id)
     {
-        var subdivision = _unitOfWork.Subdivisions.Include(x => x.Leader)
+        var subdivision = _db.Subdivisions.Include(x => x.Leader)
                                             .SingleOrDefault(x => x.Id == id);
 
         if (subdivision == null)
@@ -60,7 +60,7 @@ public class CompanyStructureService : ICompanyStructureService
 
     public Subdivision GetSubdivisionByName(string name)
     {
-        var subdivision = _unitOfWork.Subdivisions.Include(x => x.Leader)
+        var subdivision = _db.Subdivisions.Include(x => x.Leader)
                                             .SingleOrDefault(x => x.Name == name);
 
         if (subdivision == null)
@@ -73,7 +73,7 @@ public class CompanyStructureService : ICompanyStructureService
 
     public List<Subdivision> GetSubdivisions(Guid divisionsId)
     {
-        var subdivisions = _unitOfWork.Subdivisions.GetAll()
+        var subdivisions = _db.Subdivisions.GetAll()
                            .Where(x => x.DivisionId == divisionsId).ToList();
 
         if (subdivisions.Count == 0)
@@ -86,7 +86,7 @@ public class CompanyStructureService : ICompanyStructureService
 
     public Team GetTeamById(Guid teamId)
     {
-        var team = _unitOfWork.Teams.Include(x => x.Leader)
+        var team = _db.Teams.Include(x => x.Leader)
                                             .SingleOrDefault(x => x.Id == teamId);
 
         if (team == null)
@@ -99,7 +99,7 @@ public class CompanyStructureService : ICompanyStructureService
 
     public Team GetTeamByName(string name)
     {
-        var team = _unitOfWork.Teams.Include(x => x.Leader)
+        var team = _db.Teams.Include(x => x.Leader)
                                             .SingleOrDefault(x => x.Name == name);
 
         if (team == null)
@@ -112,7 +112,7 @@ public class CompanyStructureService : ICompanyStructureService
 
     public List<Team> GetTeams(Guid subdivisionsId)
     {
-        var teams = _unitOfWork.Teams.GetAll()
+        var teams = _db.Teams.GetAll()
                            .Where(x => x.SubdivisionId == subdivisionsId).ToList();
 
         if (teams.Count == 0)

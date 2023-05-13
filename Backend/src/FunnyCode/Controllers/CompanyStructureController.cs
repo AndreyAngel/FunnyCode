@@ -30,7 +30,6 @@ public class CompanyStructureController : ControllerBase
     /// <response code="200"> Successful completion </response>
     /// <response code="401"> Unauthorized </response>
     [HttpGet]
-    [Authorize(Policy = "ChangingOfCatalog")]
     [ProducesResponseType(typeof(List<DivisionListDTOResponse>), (int)HttpStatusCode.OK)]
     public IActionResult GetDivisions()
     {

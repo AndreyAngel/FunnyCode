@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using FunnyCode.Domain.Core.Entities;
+using FunnyCode.Models.DTO.Responses;
+using FunnyCode.Models.DTO.Responses.CompanyStructure;
 
 namespace FunnyCode.Helpers;
 
@@ -12,6 +15,16 @@ public class MappingProfile : Profile
     /// </summary>
     public MappingProfile()
     {
+        CreateMap<Division, DivisionDTOResponse>();
 
+        CreateMap<Division, DivisionListDTOResponse>();
+
+        CreateMap<Subdivision, SubdivisionDTOResponse>();
+
+        CreateMap<Subdivision, SubdivisionListDTOResponse>();
+
+        CreateMap<Team, TeamDTOResponse>();
+
+        CreateMap<Team, TeamListDTOResponse>();
     }
 }

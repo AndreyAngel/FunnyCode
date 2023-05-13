@@ -30,9 +30,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddSingleton<IAuthorizationHandler, AuthorizeHandler>();
 builder.Services.AddScoped<ICompanyStructureService, CompanyStructureService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddSwaggerGen(options =>
 {

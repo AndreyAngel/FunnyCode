@@ -1,16 +1,18 @@
 ﻿using FunnyCode.Models.DTO.Enums;
 
-namespace FunnyCode.Models.DTO.Requests
+namespace FunnyCode.Models.DTO.Requests;
+
+public class UsersFilterDTORequest
 {
-    public class UsersFilterDTORequest
-    {
-        public string? Address { get; set; }
-        public string? TeamName { get; set; }
-        public string? DivisionName { get; set; }
-        public string? SubDivisionName { get; set; }
-        public string? JobTitle { get; set; }
-        public RoleInProject? RoleInProject { get; set; }
+    public string? TeamName { get; set; }
 
+    public string? DivisionName { get; set; }
 
-    }
+    public string? SubdivisionName { get; set; }
+
+    public AddressDTO WorkAddress { get; set; }
+
+    public JobTitle JobTitle { get; set; }
+
+    public RoleInProject? RoleInProject { get; set; }
 }
