@@ -1,7 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
 
 /// <summary>
-/// График работы
+/// Helper entity of schedule(график работы)
 /// </summary>
 public class Schedule : BaseEntity
 {

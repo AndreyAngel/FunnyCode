@@ -1,7 +1,9 @@
 ﻿using FunnyCode.Domain.Core.Enums;
 
 namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific user vacation entity 
+/// </summary>
 public class Vacation : BaseEntity
 {
     public Guid UserId { get; set; }

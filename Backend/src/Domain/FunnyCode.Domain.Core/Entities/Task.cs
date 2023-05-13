@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific task entity 
+/// </summary>
 public class Task : BaseEntity
 {
     public string Name { get; set; }

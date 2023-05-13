@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
-
+/// <summary>
+/// Response information for specific user profile request
+/// </summary>
 public class UserProfileDTOResponse
 {
     public string Name { get; set; }

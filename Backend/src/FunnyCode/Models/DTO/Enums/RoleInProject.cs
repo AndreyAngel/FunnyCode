@@ -2,14 +2,51 @@
 {
     public enum RoleInProject
     {
-        BackDeveloper,
+        /// <summary>
+        /// BackendDeveloper
+        /// </summary>
+        BackendDeveloper,
 
-        FrontDeveloper,
-        
-        TeamLead,
+        /// <summary>
+        /// FrontendDeveloper
+        /// </summary>
+        FrontentDeveloper,
 
-        Designer
-        
+        /// <summary>
+        /// AndroidDeveloper
+        /// </summary>
+        AndroidDeveloper,
+
+        /// <summary>
+        /// iOSDeveloper
+        /// </summary>
+        iOSDeveloper,
+
+        /// <summary>
+        /// Tester
+        /// </summary>
+        Tester,
+
+        /// <summary>
+        /// DevOps
+        /// </summary>
+        DevOps,
+
+        /// <summary>
+        /// Manager
+        /// </summary>
+        Manager,
+
+        /// <summary>
+        /// Analystic
+        /// </summary>
+        Analystic,
+
+        /// <summary>
+        /// Courier
+        /// </summary>
+        Courier
+
 
     }
 }

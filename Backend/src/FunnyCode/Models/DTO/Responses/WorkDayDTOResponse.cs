@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
-
+/// <summary>
+/// Helper class for schedule
+/// </summary>
 public class WorkDayDTOResponse
 {
     public DateOnly Date { get; set; }

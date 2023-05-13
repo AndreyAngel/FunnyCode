@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific event entity 
+/// </summary>
 public class Event : BaseEntity
 {
     public string Name { get; set; }

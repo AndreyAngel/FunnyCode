@@ -1,4 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
+/// <summary>
+/// Response information for specific Subdivision request
+/// </summary>
 public class SubdivisionDTOResponse
 {
     public string Name { get; set; }

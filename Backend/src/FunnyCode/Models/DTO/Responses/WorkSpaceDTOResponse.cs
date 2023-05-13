@@ -1,7 +1,9 @@
 ﻿using FunnyCode.Models.DTO.Enums;
 
 namespace FunnyCode.Models.DTO.Responses;
-
+/// <summary>
+/// Response information for specific user work space request
+/// </summary>
 public class WorkSpaceDTOResponse
 {
     public AddressDTOResponse? Address { get; set; }

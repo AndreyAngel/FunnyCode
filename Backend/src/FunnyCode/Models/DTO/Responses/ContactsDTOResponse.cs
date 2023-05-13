@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
-
+/// <summary>
+/// Response information for user contacts request
+/// </summary>
 public class ContactsDTOResponse
 {
     public string Email { get; set; }
