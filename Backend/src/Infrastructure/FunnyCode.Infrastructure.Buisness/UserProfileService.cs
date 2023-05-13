@@ -3,7 +3,6 @@ using FunnyCode.Domain.Interfaces;
 using FunnyCode.Services.Interfaces;
 using FunnyCode.Services.Interfaces.Exceptions;
 using FunnyCode.Services.Interfaces.Models;
-using System.Security.Cryptography.X509Certificates;
 
 namespace FunnyCode.Infrastructure.Buisness;
 

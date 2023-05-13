@@ -18,4 +18,10 @@ public class UserProfileDTOResponse
     public VacationDTOResponse? CurrentVacation { get; set; }
 
     public DateOnly NextVacationStartDate { get; set; }
+
+    public int? countProjects { get; set; }
+
+    public int? countTasks { get; set; }
+
+    public int? countTeamUsers { get; set; }
 }
