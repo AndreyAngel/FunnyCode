@@ -6,6 +6,10 @@ public class Team : BaseEntity
 {
     public string Name { get; set; }
 
+    public Guid SubdivisionId { get; set; }
+
+    public Subdivision? Subdivision { get; set; }
+
     public Guid ProjectId { get; set; }
 
     public Project? Project { get; set; }

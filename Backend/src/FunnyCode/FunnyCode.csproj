@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\FunnyCode.Infrastructure.Buisness\FunnyCode.Infrastructure.Buisness.csproj" />
+    <ProjectReference Include="..\Infrastructure\FunnyCode.Infrastructure.Data\FunnyCode.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\Services\FunnyCode.Services.Interfaces\FunnyCode.Services.Interfaces.csproj" />
   </ItemGroup>
 
