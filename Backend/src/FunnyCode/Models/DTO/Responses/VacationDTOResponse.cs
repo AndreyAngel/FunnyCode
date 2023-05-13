@@ -15,4 +15,6 @@ public class VacationDTOResponse
     /// <summary>
     /// Контакты заместителя
     /// </summary>
+    public ContactsDTOResponse? DeputyContacts { get; set; }
+
 }

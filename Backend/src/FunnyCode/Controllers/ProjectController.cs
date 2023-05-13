@@ -6,6 +6,11 @@ namespace FunnyCode.Controllers;
 [ApiController]
 public class ProjectController : ControllerBase
 {
+    /// <summary>
+    /// Get all projects
+    /// </summary>
+    /// <returns>List of all projects</returns>
+    /// <response code = "201">Successful completion</response>
     [HttpGet]
     public IActionResult GetAllProjects()
     {
