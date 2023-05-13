@@ -10,5 +10,7 @@ public class Team : BaseEntity
 
     public Project? Project { get; set; }
 
+    public UserProfile Leader { get; set; }
+
     public List<UserProfile> Users { get; set; } = new();
 }

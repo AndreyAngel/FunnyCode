@@ -4,6 +4,8 @@
 /// </summary>
 public class TaskDTOResponse 
 {
+    public string Name { get; set; }
+
     public string Description { get; set; }
 
     public ProjectDTOResponse? Project { get; set; }
