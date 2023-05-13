@@ -4,8 +4,6 @@
 /// </summary>
 public class Subdivision : BaseEntity
 {
-    public Guid DivisionId { get; set; }
-
     public string Name { get; set; }
 
     public Guid LeaderId { get; set; }
@@ -13,6 +11,12 @@ public class Subdivision : BaseEntity
     public UserProfile? Leader { get; set; }
 
     public string Description { get; set; }
+
+    public Guid LeaderId { get; set; }
+
+    public UserProfile? Leader { get; set; }
+
+    public Guid DivisionId { get; set; }
 
     public Division? Division { get; set; }
 
