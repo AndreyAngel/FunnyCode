@@ -64,7 +64,64 @@ public class SubdivisionRepository: ISubdivisionRepository
 
     public List<Subdivision> Include(params Expression<Func<Subdivision, object>>[] includeProperties)
     {
-        throw new NotImplementedException();
+      
+            return new List<Subdivision>()
+            {
+                new Subdivision()
+                {
+                    Id = new Guid(),
+                    Name = "SubdivisionName",
+                    Description = "Description",
+                    DivisionId = new Guid(),
+                    LeaderId = new Guid(),
+                    Leader = new UserProfile
+                    {
+                        Name = "Name",
+                        Id = new Guid(),
+                        ContactsId = new Guid(),
+                        ScheduleId = new Guid(),
+                        WorkSpaceId = new Guid(),
+                    },
+                    
+                },
+                new Subdivision()
+                {
+                    Id = new Guid(),
+                    Name = "SubdivisionName",
+                    Description = "Description",
+                    DivisionId = new Guid(),
+                    LeaderId = new Guid(),
+                    Leader = new UserProfile
+                    {
+                        Name = "Name",
+                        Id = new Guid(),
+                        ContactsId = new Guid(),
+                        ScheduleId = new Guid(),
+                        WorkSpaceId = new Guid(),
+                    },
+
+                },
+                new Subdivision()
+                {
+                    Id = new Guid(),
+                    Name = "SubdivisionName",
+                    Description = "Description",
+                    DivisionId = new Guid(),
+                    LeaderId = new Guid(),
+                    Leader = new UserProfile
+                    {
+                        Name = "Name",
+                        Id = new Guid(),
+                        ContactsId = new Guid(),
+                        ScheduleId = new Guid(),
+                        WorkSpaceId = new Guid(),
+                    },
+
+                }
+
+
+        };
+        
     }
 
     public System.Threading.Tasks.Task RemoveAsync(Subdivision entity)
