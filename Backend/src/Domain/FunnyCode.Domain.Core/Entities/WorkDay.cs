@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Helper entity for schedule(сущность рабочего дня)
+/// </summary>
 public class WorkDay : BaseEntity
 {
     public DateOnly Date { get; set; }

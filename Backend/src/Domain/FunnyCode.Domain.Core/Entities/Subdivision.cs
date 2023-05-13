@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific subdivision entity 
+/// </summary>
 public class Subdivision : BaseEntity
 {
     public Guid DivisionId { get; set; }

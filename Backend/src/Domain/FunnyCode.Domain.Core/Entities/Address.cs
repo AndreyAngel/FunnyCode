@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific user adress entity 
+/// </summary>
 public class Address : BaseEntity
 {
     public string Region { get; set; }

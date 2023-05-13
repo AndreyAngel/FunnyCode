@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific project entity 
+/// </summary>
 public class Project : BaseEntity
 {
     public string Name { get; set; }

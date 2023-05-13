@@ -1,4 +1,4 @@
-package com.example.funnyapp.data.model
+package com.example.funnyapp.data.model.response
 
 data class AuthInfo(
     val accessToken: String,

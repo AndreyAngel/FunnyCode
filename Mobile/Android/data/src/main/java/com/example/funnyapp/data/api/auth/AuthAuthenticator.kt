@@ -1,6 +1,6 @@
 package com.example.funnyapp.data.api.auth
 
-import com.example.funnyapp.data.model.AuthInfo
+import com.example.funnyapp.data.model.response.AuthInfo
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import okhttp3.Authenticator
