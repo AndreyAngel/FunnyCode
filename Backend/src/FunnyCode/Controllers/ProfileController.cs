@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using FunnyCode.Models.DTO.Requests;
+using FunnyCode.Models.DTO.Responses.Project;
 using FunnyCode.Models.DTO.Responses.UserProfile;
 using FunnyCode.Services.Interfaces;
 using FunnyCode.Services.Interfaces.Exceptions;
 using FunnyCode.Services.Interfaces.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace FunnyCode.Controllers;
 
@@ -21,8 +23,17 @@ public class ProfileController: ControllerBase
         _userProfileService = userProfileService;
         _mapper = mapper;
     }
-
+    /// <summary>
+    /// Get User Profile by Id
+    /// </summary>
+    /// <param name="id"> User Profile Id </param>
+    /// <returns></returns>
+    /// <response code="200"> Successful completion </response>
+    /// <response code="401"> Unauthorized </response>
+    /// <response code="404"> Division with this Id wasn't founded </response>
     [HttpGet("{id:Guid}")]
+    [ProducesResponseType(typeof(UserProfileDTOResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetById(Guid id)
     {
         try
@@ -37,8 +48,17 @@ public class ProfileController: ControllerBase
             return NotFound(ex.Message);
         }
     }
-
+    /// <summary>
+    /// Get User Profile by name
+    /// </summary>
+    /// <param name="name"> User Profile name </param>
+    /// <returns></returns>
+    /// <response code="200"> Successful completion </response>
+    /// <response code="401"> Unauthorized </response>
+    /// <response code="404"> Division with this name wasn't founded </response>
     [HttpGet("{name}")]
+    [ProducesResponseType(typeof(UserProfileDTOResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetByName(string name)
     {
         try
@@ -53,8 +73,16 @@ public class ProfileController: ControllerBase
             return NotFound(ex.Message);
         }
     }
-
+    /// <summary>
+    /// Get User Profiles by filters
+    /// </summary>
+    /// <param name="request"> User Profiles filter </param>
+    /// <returns></returns>
+    /// <response code="200"> Successful completion </response>
+    /// <response code="401"> Unauthorized </response>
     [HttpPost]
+    [ProducesResponseType(typeof(List<UserProfileListDTOResponse>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetByFilters(UsersFilterDTORequest request)
     {
         try
