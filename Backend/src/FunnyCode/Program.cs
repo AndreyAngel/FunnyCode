@@ -1,4 +1,8 @@
+using FunnyCode.Domain.Interfaces;
 using FunnyCode.Helpers;
+using FunnyCode.Infrastructure.Buisness;
+using FunnyCode.Infrastructure.Data;
+using FunnyCode.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
@@ -27,6 +31,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 builder.Services.AddSingleton<IAuthorizationHandler, AuthorizeHandler>();
+builder.Services.AddScoped<ICompanyStructureService, CompanyStructureService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddSwaggerGen(options =>
 {

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\FunnyCode.Domain.Interfaces\FunnyCode.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Services\FunnyCode.Services.Interfaces\FunnyCode.Services.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
