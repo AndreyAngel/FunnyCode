@@ -77,10 +77,6 @@ public class SubdivisionRepository: ISubdivisionRepository
         throw new NotImplementedException();
     }
 
-    internal class SubdivisionRepository
-    {
-    }
-
     protected virtual void Dispose(bool disposing)
     {
         if (!disposedValue)
