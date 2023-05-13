@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragment.EmployeeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.ChatsFragment">
 
     <EditText
         android:id="@+id/editTextSearchEmployee"
@@ -14,33 +14,25 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/bg_edit_text"
-        android:drawableStart="@drawable/ic_search"
+        android:drawableEnd="@drawable/ic_search"
         android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="@font/inter_light"
-        android:hint="Кого вы хотите найти?"
+        android:hint="Сообщения"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabsSearch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSearchEmployee" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpSearch"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listChats"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabsSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearchEmployee" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

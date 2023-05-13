@@ -5,11 +5,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.funnyapp.R
 import com.example.funnyapp.databinding.ActivityMainBinding
+import com.example.funnyapp.presentation.fragment.ChatsFragment
 import com.example.funnyapp.presentation.fragment.EmployeeFragment
 import com.example.funnyapp.presentation.fragment.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     private val fragmentManager by lazy { supportFragmentManager }
+    private val chatsFragment by lazy { ChatsFragment.newInstance() }
     private val employeeFragment by lazy { EmployeeFragment.newInstance() }
     private val profileFragment by lazy { ProfileFragment.newInstance() }
     private lateinit var activeFragment: Fragment
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.navMain -> {
                     return@setOnItemSelectedListener false
+                }
+                R.id.navChats -> {
+                    openFragment(chatsFragment)
+                    return@setOnItemSelectedListener true
                 }
                 R.id.navSearch -> {
                     openFragment(employeeFragment)

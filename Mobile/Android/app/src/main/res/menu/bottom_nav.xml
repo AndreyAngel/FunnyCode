@@ -6,6 +6,9 @@
         android:icon="@drawable/ic_nav_tree"
         android:title="@string/nav_structure" />
     <item
+        android:id="@+id/navChats"
+        android:title="Чаты" />
+    <item
         android:id="@+id/navSearch"
         android:icon="@drawable/ic__nav_employ"
         android:title="@string/nav_search" />

@@ -36,12 +36,20 @@
     </style>
 
     <style name="BottomNavigationView.Themed" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="backgroundTint">?attr/colorOnPrimary</item>
-        <item name="itemIconTint">?attr/colorPrimary</item>
+        <item name="backgroundTint">?attr/colorOnSecondary</item>
+        <item name="itemIconTint">?attr/colorSecondary</item>
+        <item name="itemTextColor">?attr/colorSecondary</item>
     </style>
 
     <style name="ImageView.Round" parent="">
         <item name="cornerSize">50%</item>
         <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="EditText.Themed" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+        <item name="android:textColorHint">#676767</item>
+        <item name="android:textSize">15sp</item>
     </style>
 </resources>
