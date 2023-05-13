@@ -1,7 +1,9 @@
 ﻿using FunnyCode.Domain.Core.Enums;
 
 namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific user work space entity 
+/// </summary>
 public class WorkSpace : BaseEntity
 {
     public Guid AddressId { get; set; }

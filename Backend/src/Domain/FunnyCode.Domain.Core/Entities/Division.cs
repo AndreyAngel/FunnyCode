@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific division entity 
+/// </summary>
 public class Division : BaseEntity
 {
     public string Name { get; set; }

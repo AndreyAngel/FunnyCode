@@ -1,4 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
+/// <summary>
+/// Response information for specific event request
+/// </summary>
 public class EventDTOResponse
 {
     public string Name { get; set; }

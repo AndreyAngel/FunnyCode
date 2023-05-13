@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific user contacts entity 
+/// </summary>
 public class Contacts : BaseEntity
 {
     public string Email { get; set; }

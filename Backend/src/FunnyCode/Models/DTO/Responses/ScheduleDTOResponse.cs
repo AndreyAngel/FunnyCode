@@ -1,7 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
 
 /// <summary>
-/// График работы
+/// Response information for график работы(schedule) request
 /// </summary>
 public class ScheduleDTOResponse 
 {

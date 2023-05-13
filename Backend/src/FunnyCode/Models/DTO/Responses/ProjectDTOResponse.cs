@@ -1,4 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
+/// <summary>
+/// Response information for specific project request
+/// </summary>
 public class ProjectDTOResponse
 {
 

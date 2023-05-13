@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Models.DTO.Responses;
-
+/// <summary>
+/// Response information for adress request
+/// </summary>
 public class AddressDTOResponse 
 {
     public string Region { get; set; }
