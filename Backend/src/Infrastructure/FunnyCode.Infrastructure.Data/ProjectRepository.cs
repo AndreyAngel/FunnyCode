@@ -41,8 +41,6 @@ public class ProjecteRepository : IProjectRepository
                 Id = new Guid()
 
             }
-
-
         };
     }
 

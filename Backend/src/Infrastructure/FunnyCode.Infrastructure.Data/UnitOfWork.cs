@@ -6,15 +6,24 @@ public class UnitOfWork : IUnitOfWork
 {
     private bool disposedValue;
 
-    public IDivisionRepository Divisions => throw new NotImplementedException();
+    public IDivisionRepository Divisions { get; }
 
-    public IProfileRepository Profiles => throw new NotImplementedException();
+    public IProfileRepository Profiles { get; }
 
-    public IProjectRepository Projects => throw new NotImplementedException();
+    public IProjectRepository Projects { get; }
 
-    public ISubdivisionRepository Subdivisions => throw new NotImplementedException();
+    public ISubdivisionRepository Subdivisions { get; }
 
-    public ITeamRepository Teams => throw new NotImplementedException();
+    public ITeamRepository Teams { get; }
+
+    public UnitOfWork()
+    {
+        Divisions = new DivisionRepository();
+        Profiles = new ProfileRepository();
+        Projects = new ProjecteRepository();
+        Subdivisions = new SubdivisionRepository();
+        Teams = new TeamRepository();
+    }
 
     public Task SaveChangesAsync()
     {
