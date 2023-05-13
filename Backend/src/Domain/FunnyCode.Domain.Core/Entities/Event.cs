@@ -1,12 +1,16 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
 
-public class Division : BaseEntity
+public class Event : BaseEntity
 {
     public string Name { get; set; }
 
     public string? Description { get; set; }
 
+    public DateTime Date { get; set; }
+
+    public string Location { get; set; }
+
     public List<Subdivision> Subdivisions { get; set; } = new();
 
-    public List<Event> Events { get; set; } = new();
+    public List<Division> Divisions { get; set; } = new();
 }

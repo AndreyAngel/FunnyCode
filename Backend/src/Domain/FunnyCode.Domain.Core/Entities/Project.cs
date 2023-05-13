@@ -1,5 +1,16 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
 
-public class Project
+public class Project : BaseEntity
 {
+    public string Name { get; set; }
+
+    public string? Description { get; set; }
+
+    public List<Team> Teams { get; set; } = new();
+
+    public DateOnly StartDate { get; set; }
+
+    public DateOnly EndDate { get; set; }
+
+    public List<Task> Tasks { get; set; }
 }
