@@ -8,7 +8,9 @@ public class SubdivisionDTOResponse
 
     public string? Description { get; set; }
 
-    public DivisionDTOResponse? Division { get; set; }
+    public string? Division { get; set; }
 
     public List<TeamListDTOResponse> Teams { get; set; } = new();
+
+    public List<UserProfileListDTOResponse> Users { get; set; } = new();
 }
