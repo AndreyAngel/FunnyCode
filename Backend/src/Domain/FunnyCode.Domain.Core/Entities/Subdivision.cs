@@ -6,6 +6,10 @@ public class Subdivision : BaseEntity
 {
     public string Name { get; set; }
 
+    public Guid LeaderId { get; set; }
+
+    public UserProfile? Leader { get; set; }
+
     public string Description { get; set; }
 
     public Guid LeaderId { get; set; }

@@ -1,4 +1,5 @@
 ﻿using FunnyCode.Domain.Core.Entities;
+using FunnyCode.Domain.Core.Enums;
 using FunnyCode.Domain.Interfaces;
 using System.Linq.Expressions;
 
@@ -10,17 +11,100 @@ public class DivisionRepository : IDivisionRepository
 
     public List<Division> GetAll()
     {
-        throw new NotImplementedException();
+        return new List<Division>()
+        {
+            new Division()
+            {
+                Id = new Guid(),
+                Name = "develop department",
+            },
+
+            new Division()
+            {
+                Id = new Guid(),
+                Name = "develop department",
+            },
+
+            new Division()
+            {
+                Id = new Guid(),
+                Name = "develop department",
+            },
+
+        };
     }
 
     public Division? GetById(Guid Id)
     {
-        throw new NotImplementedException();
+        return new Division()
+        {
+            Id = new Guid(),
+            Name = "develop department",
+            Leader = new UserProfile()
+            {
+                Name = "John",
+                ContactsId = new Guid(),
+                WorkSpaceId = new Guid(),
+                Id = new Guid(),
+                ScheduleId = new Guid()
+            },
+            Description = "DivisionDescription",
+            LeaderId = new Guid(),
+        };
     }
 
     public List<Division> Include(params Expression<Func<Division, object>>[] includeProperties)
     {
-        throw new NotImplementedException();
+        return new List<Division>()
+        {
+            new Division()
+            {
+                Id = new Guid(),
+                Name = "develop department",
+                Leader = new UserProfile()
+                {
+                    Name = "John",
+                    ContactsId = new Guid(),
+                    WorkSpaceId = new Guid(),
+                    Id = new Guid(),
+                    ScheduleId = new Guid()
+                },
+                Description = "DivisionDescription",
+                LeaderId = new Guid(),
+            },
+
+            new Division()
+            {
+                Id = new Guid(),
+                Name = "develop department",
+                Leader = new UserProfile()
+                {
+                    Name = "John",
+                    ContactsId = new Guid(),
+                    WorkSpaceId = new Guid(),
+                    Id = new Guid(),
+                    ScheduleId = new Guid()
+                },
+                Description = "DivisionDescription",
+                LeaderId = new Guid(),
+            },
+
+            new Division()
+            {
+                Id = new Guid(),
+                Name = "develop department",
+                Leader = new UserProfile()
+                {
+                    Name = "John",
+                    ContactsId = new Guid(),
+                    WorkSpaceId = new Guid(),
+                    Id = new Guid(),
+                    ScheduleId = new Guid()
+                },
+                Description = "DivisionDescription",
+                LeaderId = new Guid(),
+            },
+        };
     }
 
     public System.Threading.Tasks.Task AddAsync(Division entity)
