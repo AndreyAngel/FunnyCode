@@ -37,5 +37,11 @@
 
     <style name="BottomNavigationView.Themed" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="backgroundTint">?attr/colorOnPrimary</item>
+        <item name="itemIconTint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="ImageView.Round" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
     </style>
 </resources>
