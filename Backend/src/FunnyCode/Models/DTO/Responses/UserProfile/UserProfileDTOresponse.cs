@@ -1,4 +1,5 @@
 ﻿namespace FunnyCode.Models.DTO.Responses.UserProfile;
+
 /// <summary>
 /// Response information for specific user profile request
 /// </summary>
@@ -14,5 +15,7 @@ public class UserProfileDTOResponse
 
     public ScheduleDTOResponse? Schedule { get; set; }
 
-    public List<VacationDTOResponse> Vacations { get; set; }
+    public VacationDTOResponse? CurrentVacation { get; set; }
+
+    public DateOnly NextVacationStartDate { get; set; }
 }
