@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\FunnyCode.Domain.Core\FunnyCode.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\Domain\FunnyCode.Domain.Interfaces\FunnyCode.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
