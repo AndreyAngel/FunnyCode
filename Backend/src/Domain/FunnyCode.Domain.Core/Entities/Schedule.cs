@@ -5,5 +5,5 @@
 /// </summary>
 public class Schedule : BaseEntity
 {
-    
+    public List<WorkDay> Schedules { get; set; }
 }
