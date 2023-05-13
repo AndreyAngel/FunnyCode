@@ -11,10 +11,12 @@ import com.example.funnyapp.databinding.FragmentEmployeeBinding
 import com.example.funnyapp.presentation.adapter.TabsPagerAdapter
 import com.example.funnyapp.presentation.vm.SearchViewModel
 import com.google.android.material.tabs.TabLayoutMediator
+import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class EmployeeFragment : Fragment() {
     private lateinit var binding: FragmentEmployeeBinding
+    private val searchViewModel by activityViewModel<SearchViewModel>()
 
     companion object {
         @JvmStatic
@@ -45,7 +47,7 @@ class EmployeeFragment : Fragment() {
         }.attach()
 
         editTextSearchEmployee.addTextChangedListener {
-            searchFragment.searchPersonnel(it.toString())
+            searchViewModel.searchPersonnel(it.toString())
         }
     }
 }

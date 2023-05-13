@@ -1,22 +1,20 @@
 package com.example.funnyapp.presentation.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.funnyapp.R
 import com.example.funnyapp.databinding.FragmentSearchBinding
 import com.example.funnyapp.presentation.adapter.PersonnelAdapter
 import com.example.funnyapp.presentation.vm.SearchViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
-    private val searchViewModel by viewModel<SearchViewModel>()
+    private val searchViewModel by activityViewModel<SearchViewModel>()
     private val managersAdapter by lazy { PersonnelAdapter() }
     private val employeesAdapter by lazy { PersonnelAdapter() }
 
@@ -33,10 +31,6 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-    }
-
-    fun searchPersonnel(text: String) {
-        searchViewModel.searchPersonnel(text)
     }
 
     private fun initView() = with(binding) {
