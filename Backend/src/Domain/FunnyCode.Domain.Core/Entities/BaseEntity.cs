@@ -1,6 +1,8 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
- public class BaseEntity
+/// <summary>
+/// Helper class
+/// </summary>
+public class BaseEntity
 {
     public Guid Id { get; set; }
 }

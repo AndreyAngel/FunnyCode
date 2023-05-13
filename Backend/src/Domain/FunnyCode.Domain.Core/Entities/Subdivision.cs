@@ -1,5 +1,7 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific subdivision entity 
+/// </summary>
 public class Subdivision : BaseEntity
 {
     public Guid DivisionId { get; set; }
@@ -12,5 +14,7 @@ public class Subdivision : BaseEntity
 
     public List<Team> Teams { get; set; } = new();
 
-    public List<Event> Events { get; set; } = new();
+    public List<UserProfile> Users { get; set; } = new();
+
+    public List<Project> Projects { get; set; } = new();
 }

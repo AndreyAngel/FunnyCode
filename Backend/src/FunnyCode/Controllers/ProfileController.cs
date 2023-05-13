@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FunnyCode.Models.DTO.Requests;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FunnyCode.Controllers;
 
@@ -12,14 +13,20 @@ public class ProfileController: ControllerBase
         throw new NotImplementedException();
     }
 
-    [HttpPut("{id:Guid}")]
-    public IActionResult Update(Guid id)
+    [HttpGet("{name}")]
+    public IActionResult GetByName(string name)
     {
         throw new NotImplementedException();
     }
 
-    [HttpDelete("{id:Guid}")]
-    public IActionResult Delete(Guid id)
+    [HttpGet]
+    public IActionResult GetByFilters(UsersFilterDTORequest filters)
+    {
+        throw new NotImplementedException();
+    }
+
+    [HttpPut("{id:Guid}")]
+    public IActionResult Update(Guid id)
     {
         throw new NotImplementedException();
     }

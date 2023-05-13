@@ -1,10 +1,10 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
-
+/// <summary>
+/// Specific user profile entity 
+/// </summary>
 public class UserProfile : BaseEntity
 {
     public string Name { get; set; }
-
-    public string Surname { get; set; }
 
     public DateOnly BirthDate { get; set; }
 
