@@ -3,8 +3,9 @@ package com.example.funnyapp.data.repository
 import android.content.Context
 import com.example.funnyapp.data.R
 import com.example.funnyapp.data.api.ApiResult
+import com.example.funnyapp.data.api.MainApiClient
 import com.example.funnyapp.data.api.auth.TokenManager
-import com.example.funnyapp.data.model.ServerError
+import com.example.funnyapp.data.model.response.ServerError
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -16,10 +17,10 @@ import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException
 
-abstract class BaseRepository(private val context: Context) {
-    val tokenManager = TokenManager(context)
+abstract class BaseRepository(private val context: Context, apiClient: MainApiClient) {
+    val apiService = apiClient.getApiService()
 
-    fun <D> apiRequestFlow(call: suspend () -> Call<D>): Flow<ApiResult<D>> = flow {
+    fun <T> apiRequestFlow(call: suspend () -> Call<T>): Flow<ApiResult<T>> = flow {
         emit(ApiResult.Loading)
 
         withTimeoutOrNull(20000L) {
