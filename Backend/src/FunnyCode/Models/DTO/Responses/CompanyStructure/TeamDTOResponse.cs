@@ -13,6 +13,6 @@ public class TeamDTOResponse
 
     public UserProfileListDTOResponse Leader { get; set; }
 
-    public ProjectDTOResponse? Project { get; set; }
+    public ProjectListDTOResponse? Project { get; set; }
 
 }
