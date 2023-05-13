@@ -1,8 +1,6 @@
-﻿namespace FunnyCode.Domain.Core.Entities;
-
+﻿namespace FunnyCode.Models.DTO.Responses;
 public class ProjectDTOResponse
 {
-    public Guid Id { get; set; }
 
     public string Name { get; set; }
 

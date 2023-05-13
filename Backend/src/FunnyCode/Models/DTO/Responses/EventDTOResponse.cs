@@ -1,9 +1,6 @@
-﻿namespace FunnyCode.Domain.Core.Entities;
-
+﻿namespace FunnyCode.Models.DTO.Responses;
 public class EventDTOResponse
 {
-    public Guid Id { get; set; }
-
     public string Name { get; set; }
 
     public string? Description { get; set; }
