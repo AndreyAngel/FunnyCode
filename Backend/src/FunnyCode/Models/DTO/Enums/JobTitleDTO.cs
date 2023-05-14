@@ -3,7 +3,7 @@
 /// <summary>
 /// Должность
 /// </summary>
-public enum JobTitle
+public enum JobTitleDTO
 {
     /// <summary>
     /// BackendDeveloper

@@ -1,6 +1,6 @@
 ﻿namespace FunnyCode.Models.DTO.Enums
 {
-    public enum RoleInProject
+    public enum RoleInProjectDTO
     {
         /// <summary>
         /// BackendDeveloper
