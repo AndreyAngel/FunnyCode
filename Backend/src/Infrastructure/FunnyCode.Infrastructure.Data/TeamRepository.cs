@@ -1,20 +1,12 @@
 ﻿using FunnyCode.Domain.Core.Entities;
 using FunnyCode.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
+namespace FunnyCode.Infrastructure.Data;
 
 public class TeamRepository : ITeamRepository
 {
     private bool disposedValue;
-
-    public System.Threading.Tasks.Task AddAsync(Team entity)
-    {
-        throw new NotImplementedException();
-    }
 
     public List<Team> GetAll()
     {
@@ -25,7 +17,6 @@ public class TeamRepository : ITeamRepository
             {
                 Id = new Guid(),
                 Name = "TeamName",
-                ProjectId = new Guid(),
                 SubdivisionId = new Guid(),
                                
             },
@@ -33,7 +24,6 @@ public class TeamRepository : ITeamRepository
             {
                 Id = new Guid(),
                 Name = "TeamName",
-                ProjectId = new Guid(),
                 SubdivisionId = new Guid(),
 
             },
@@ -41,7 +31,6 @@ public class TeamRepository : ITeamRepository
             {
                 Id = new Guid(),
                 Name = "TeamName",
-                ProjectId = new Guid(),
                 SubdivisionId = new Guid(),
 
             },
@@ -55,7 +44,6 @@ public class TeamRepository : ITeamRepository
             
             Id = new Guid(),
             Name = "TeamName",
-            ProjectId = new Guid(),
             SubdivisionId = new Guid(),
             Leader = new UserProfile 
             {
@@ -65,14 +53,31 @@ public class TeamRepository : ITeamRepository
                 ContactsId = new Guid(),
                 
             },
-            Project = new Project()
-            {
-                Id = new Guid(),
-                Name = "ProjectName",
-                Description = "ProjectDescription",
-     
-            },
-           
+            Projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
+
         };
     }
 
@@ -84,7 +89,6 @@ public class TeamRepository : ITeamRepository
             {
                 Id = new Guid(),
                 Name = "TeamName",
-                ProjectId = new Guid(),
                 SubdivisionId = new Guid(),
                 Leader = new UserProfile
                 {
@@ -95,21 +99,37 @@ public class TeamRepository : ITeamRepository
                     WorkSpaceId= new Guid(),
               
                 },
-                Project = new Project()
+                Projects = new List<Project>
                 {
-                    Id = new Guid(),
-                    Name = "ProjectName",
-                    Description = "ProjectDescription",
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
 
-                },
-                
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
+
 
             },
             new Team()
             {
                 Id = new Guid(),
                 Name = "TeamName",
-                ProjectId = new Guid(),
                 SubdivisionId = new Guid(),
                 Leader = new UserProfile
                 {
@@ -120,13 +140,30 @@ public class TeamRepository : ITeamRepository
                     WorkSpaceId= new Guid(),
 
                 },
-                Project = new Project()
+                Projects = new List<Project>
                 {
-                    Id = new Guid(),
-                    Name = "ProjectName",
-                    Description = "ProjectDescription",
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
 
-                },
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
 
 
             },
@@ -134,7 +171,6 @@ public class TeamRepository : ITeamRepository
             {
                 Id = new Guid(),
                 Name = "TeamName",
-                ProjectId = new Guid(),
                 SubdivisionId = new Guid(),
                 Leader = new UserProfile
                 {
@@ -145,27 +181,34 @@ public class TeamRepository : ITeamRepository
                     WorkSpaceId= new Guid(),
 
                 },
-                Project = new Project()
+                Projects = new List<Project>
                 {
-                    Id = new Guid(),
-                    Name = "ProjectName",
-                    Description = "ProjectDescription",
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
 
-                },
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
 
 
             },
         };
-    }
-
-    public System.Threading.Tasks.Task RemoveAsync(Team entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    public System.Threading.Tasks.Task UpdateAsync(Team entity)
-    {
-        throw new NotImplementedException();
     }
 
     protected virtual void Dispose(bool disposing)

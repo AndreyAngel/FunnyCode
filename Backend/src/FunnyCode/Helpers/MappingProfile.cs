@@ -6,8 +6,10 @@ using FunnyCode.Models.DTO.Enums;
 using FunnyCode.Models.DTO.Requests;
 using FunnyCode.Models.DTO.Responses;
 using FunnyCode.Models.DTO.Responses.CompanyStructure;
+using FunnyCode.Models.DTO.Responses.Project;
 using FunnyCode.Models.DTO.Responses.UserProfile;
 using FunnyCode.Services.Interfaces.Models;
+using Task = FunnyCode.Domain.Core.Entities.Task;
 using TaskStatus = FunnyCode.Domain.Core.Enums.TaskStatus;
 
 namespace FunnyCode.Helpers;
@@ -26,19 +28,25 @@ public class MappingProfile : Profile
 
         CreateMap<Division, DivisionListDTOResponse>();
 
+        CreateMap<Division, UserProfileDivisionDTOResponse>();
+
+        CreateMap<Division, ProjectDivisionsDTOResponse>();
+
         CreateMap<Subdivision, SubdivisionDTOResponse>();
 
         CreateMap<Subdivision, SubdivisionListDTOResponse>();
+
+        CreateMap<Subdivision, ProjectSubdivisionsDTOResponse>();
 
         CreateMap<Team, TeamDTOResponse>();
 
         CreateMap<Team, TeamListDTOResponse>();
 
+        CreateMap<Team, ProjectTeamsDTOResponse>();
+
         CreateMap<UserProfile, UserProfileDTOResponse>();
 
         CreateMap<UsersFilterDTORequest, UserFiltersModel>();
-
-        CreateMap<Division, UserProfileDivisionDTOResponse>();
 
         CreateMap<UserProfile, UserProfileListDTOResponse>();
 
@@ -53,6 +61,12 @@ public class MappingProfile : Profile
         CreateMap<Vacation, VacationDTOResponse>();
 
         CreateMap<WorkDay, WorkDayDTOResponse>();
+
+        CreateMap<Project, ProjectDTOResponse>();
+
+        CreateMap<Project, ProjectListDTOResponse>();
+
+        CreateMap<Task, TaskDTOResponse>();
 
         CreateMap<JobTitle, JobTitleDTO>();
 

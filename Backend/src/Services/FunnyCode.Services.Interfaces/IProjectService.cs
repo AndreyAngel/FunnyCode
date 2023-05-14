@@ -2,7 +2,7 @@
 
 namespace FunnyCode.Services.Interfaces;
 
-public interface IProjectService
+public interface IProjectService : IDisposable
 {
     List<Project> GetAll();
 
@@ -12,7 +12,7 @@ public interface IProjectService
 
     List<Project> GetProjectsByTeamId(Guid teamId);
 
-    List<Project> GetProjectsByUserProfileId(Guid userProfileId);
+    Project GetProjectByUserProfileId(Guid userProfileId);
 
     List<Division> GetDivisionsByProjectId(Guid projectId);
 }

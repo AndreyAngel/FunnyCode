@@ -1,5 +1,4 @@
 ﻿using FunnyCode.Domain.Core.Entities;
-using FunnyCode.Domain.Core.Enums;
 using FunnyCode.Domain.Interfaces;
 using System.Linq.Expressions;
 
@@ -16,19 +15,19 @@ public class DivisionRepository : IDivisionRepository
             new Division()
             {
                 Id = new Guid(),
-                Name = "develop department",
+                Name = "develop department"
             },
 
             new Division()
             {
                 Id = new Guid(),
-                Name = "develop department",
+                Name = "develop department"
             },
 
             new Division()
             {
                 Id = new Guid(),
-                Name = "develop department",
+                Name = "develop department"
             },
 
         };
@@ -50,6 +49,30 @@ public class DivisionRepository : IDivisionRepository
             },
             Description = "DivisionDescription",
             LeaderId = new Guid(),
+            Projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
         };
     }
 
@@ -71,6 +94,30 @@ public class DivisionRepository : IDivisionRepository
                 },
                 Description = "DivisionDescription",
                 LeaderId = new Guid(),
+                Projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
             },
 
             new Division()
@@ -87,6 +134,30 @@ public class DivisionRepository : IDivisionRepository
                 },
                 Description = "DivisionDescription",
                 LeaderId = new Guid(),
+                Projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
             },
 
             new Division()
@@ -103,23 +174,32 @@ public class DivisionRepository : IDivisionRepository
                 },
                 Description = "DivisionDescription",
                 LeaderId = new Guid(),
+                Projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
             },
         };
-    }
-
-    public System.Threading.Tasks.Task AddAsync(Division entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    public System.Threading.Tasks.Task UpdateAsync(Division entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    public System.Threading.Tasks.Task RemoveAsync(Division entity)
-    {
-        throw new NotImplementedException();
     }
 
     protected virtual void Dispose(bool disposing)

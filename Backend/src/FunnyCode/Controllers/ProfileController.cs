@@ -58,7 +58,7 @@ public class ProfileController : ControllerBase
     /// <response code="401"> Unauthorized </response>
     /// <response code="404"> User profile with this name wasn't founded </response>
     [HttpGet("{name}")]
-    [ProducesResponseType(typeof(UserProfileDTOResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(List<UserProfileListDTOResponse>), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetByName(string name)
     {
