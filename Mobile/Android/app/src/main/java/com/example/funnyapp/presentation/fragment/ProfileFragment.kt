@@ -6,15 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.funnyapp.data.model.response.Divisions
 import com.example.funnyapp.databinding.FragmentProfileBinding
+import com.example.funnyapp.presentation.adapter.ProfileSphereAdapter
 import com.example.funnyapp.presentation.adapter.ProfileWorkDataAdapter
 import com.example.funnyapp.presentation.vm.ProfileViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(), ProfileSphereAdapter.OnClickListener {
     private lateinit var binding: FragmentProfileBinding
     private val profileViewModel by viewModel<ProfileViewModel>()
+    private val profileSpheresAdapter by lazy { ProfileSphereAdapter(this) }
     private val profileContactsAdapter by lazy { ProfileWorkDataAdapter() }
     private val profileWorkDataAdapter by lazy { ProfileWorkDataAdapter() }
 
@@ -92,5 +95,9 @@ class ProfileFragment : Fragment() {
         profileViewModel.workData.observe(viewLifecycleOwner) {
             profileWorkDataAdapter.submitList(it)
         }
+    }
+
+    override fun onProfileSphereClick(item: Divisions) {
+
     }
 }

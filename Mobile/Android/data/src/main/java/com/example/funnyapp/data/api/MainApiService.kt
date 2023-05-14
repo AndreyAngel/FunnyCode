@@ -9,7 +9,7 @@ import com.example.funnyapp.data.model.response.Subdivision
 import com.example.funnyapp.data.model.response.Subdivisions
 import com.example.funnyapp.data.model.response.Team
 import com.example.funnyapp.data.model.response.Teams
-import com.example.funnyapp.data.model.response.UserProfile
+import com.example.funnyapp.data.model.response.User
 import com.example.funnyapp.data.model.response.Users
 import retrofit2.Call
 import retrofit2.http.GET
@@ -52,7 +52,7 @@ interface MainApiService {
      * Profile Requests
      */
     @GET("/api/Profile/GetById/{id}")
-    fun getProfileById(@Path("id") id: String): Call<UserProfile>
+    fun getProfileById(@Path("id") id: String): Call<User>
 
     @POST("/api/Profile/GetByFilters")
     fun getProfileByFilters(request: GetProfileByFiltersParam): Call<List<Users>>

@@ -13,6 +13,10 @@ class ProfileViewModel : ViewModel() {
     private val workDataMutable = MutableLiveData<List<ProfileWorkData>>()
     val workData: LiveData<List<ProfileWorkData>> = workDataMutable
 
+    fun getDivisions() {
+
+    }
+
     fun getContacts() {
         contactsMutable.value = listOf(
             ProfileWorkData("Мобильный телефон", "+7 (983) 231-95-09"),

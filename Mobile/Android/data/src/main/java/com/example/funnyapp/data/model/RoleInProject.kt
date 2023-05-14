@@ -1,5 +1,13 @@
 package com.example.funnyapp.data.model
 
 enum class RoleInProject {
-    Role
+    BackendDeveloper,
+    FrontendDeveloper,
+    AndroidDeveloper,
+    IOSDeveloper,
+    Tester,
+    DevOps,
+    Manager,
+    Analyst,
+    Courier
 }
