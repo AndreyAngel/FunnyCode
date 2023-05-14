@@ -6,15 +6,15 @@ namespace FunnyCode.Models.DTO.Responses.UserProfile;
 /// </summary>
 public class WorkSpaceDTOResponse
 {
-    public string Division { get; set; }
+    public UserProfileDivisionDTOResponse Division { get; set; }
 
     public string Subdivision { get; set; }
 
     public Guid TeamId { get; set; }
 
-    public JobTitle JobTitle { get; set; }
+    public JobTitleDTO JobTitle { get; set; }
 
-    public RoleInProject? Role { get; set; }
+    public RoleInProjectDTO? Role { get; set; }
 
     public AddressDTO? WorkAddress { get; set; }
 

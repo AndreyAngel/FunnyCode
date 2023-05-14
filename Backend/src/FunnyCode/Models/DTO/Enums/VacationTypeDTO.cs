@@ -1,6 +1,6 @@
 ﻿namespace FunnyCode.Models.DTO.Enums;
 
-public enum VacationType
+public enum VacationTypeDTO
 {
     /// <summary>
     /// Vacation

@@ -4,7 +4,6 @@ using FunnyCode.Infrastructure.Buisness;
 using FunnyCode.Infrastructure.Data;
 using FunnyCode.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
