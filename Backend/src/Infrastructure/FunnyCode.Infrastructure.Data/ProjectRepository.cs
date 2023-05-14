@@ -1,20 +1,12 @@
 ﻿using FunnyCode.Domain.Core.Entities;
 using FunnyCode.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
+namespace FunnyCode.Infrastructure.Data;
 
 public class ProjecteRepository : IProjectRepository
 {
     private bool disposedValue;
-
-    public System.Threading.Tasks.Task AddAsync(Project entity)
-    {
-        throw new NotImplementedException();
-    }
 
     public List<Project> GetAll()
     {
@@ -22,21 +14,21 @@ public class ProjecteRepository : IProjectRepository
         {
             new Project()
             {
-                Name = "ProjectName1",
+                Name = "FunnyCode",
                 Description ="Description",
                 Id = new Guid()
 
             },
             new Project()
             {
-                Name = "ProjectName2",
+                Name = "For-A-Donation",
                 Description ="Description",
                 Id = new Guid()
 
             },
             new Project()
             {
-                Name = "ProjectName3",
+                Name = "E-commerce system",
                 Description ="Description",
                 Id = new Guid()
 
@@ -49,7 +41,7 @@ public class ProjecteRepository : IProjectRepository
         return new Project()
         {
          
-            Name = "ProjectName",
+            Name = "FunneCode",
             Description ="Description",
             Id = new Guid()
             
@@ -63,7 +55,7 @@ public class ProjecteRepository : IProjectRepository
         {
             new Project()
             {
-                Name = "ProjectName1",
+                Name = "FunnyCode",
                 Description ="Description",
                 Id = new Guid(),
                 StartDate = new DateOnly(),
@@ -73,7 +65,7 @@ public class ProjecteRepository : IProjectRepository
             },
             new Project()
             {
-                Name = "ProjectName2",
+                Name = "For-A-Donation",
                 Description ="Description",
                 Id = new Guid(),
                 StartDate = new DateOnly(),
@@ -82,7 +74,7 @@ public class ProjecteRepository : IProjectRepository
             },
             new Project()
             {
-                Name = "ProjectName3",
+                Name = "E-commerce system",
                 Description ="Description",
                 Id = new Guid(),
                 StartDate = new DateOnly(),
@@ -92,20 +84,6 @@ public class ProjecteRepository : IProjectRepository
 
 
         };
-    }
-
-    public System.Threading.Tasks.Task RemoveAsync(Project entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    public System.Threading.Tasks.Task UpdateAsync(Project entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    internal class ProjectRepository
-    {
     }
 
     protected virtual void Dispose(bool disposing)

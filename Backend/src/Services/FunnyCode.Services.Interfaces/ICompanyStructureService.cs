@@ -2,7 +2,7 @@
 
 namespace FunnyCode.Services.Interfaces;
 
-public interface ICompanyStructureService
+public interface ICompanyStructureService : IDisposable
 {
     List<Division> GetDivisions();
 

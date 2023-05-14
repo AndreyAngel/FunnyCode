@@ -31,6 +31,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<ICompanyStructureService, CompanyStructureService>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 

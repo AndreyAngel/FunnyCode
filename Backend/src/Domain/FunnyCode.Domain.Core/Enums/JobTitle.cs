@@ -43,10 +43,10 @@ public enum JobTitle
     /// <summary>
     /// Analystic
     /// </summary>
-    Analystic,
+    Analyst,
 
     /// <summary>
-    /// Courier
+    /// DepartmentLeader
     /// </summary>
-    Courier
+    DepartmentLeader
 }

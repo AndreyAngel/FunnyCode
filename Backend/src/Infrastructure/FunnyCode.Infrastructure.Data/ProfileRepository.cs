@@ -9,11 +9,6 @@ public class ProfileRepository : IProfileRepository
 {
     private bool disposedValue;
 
-    public System.Threading.Tasks.Task AddAsync(UserProfile entity)
-    {
-        throw new NotImplementedException();
-    }
-
     public List<UserProfile> GetAll()
     {
         return new List<UserProfile>()
@@ -34,7 +29,7 @@ public class ProfileRepository : IProfileRepository
             },
             new UserProfile()
             {
-                Name = "Jorge",
+                Name = "George",
                 Id = new Guid(),
                 WorkSpaceId = new Guid(),
                 ContactsId = new Guid(),
@@ -89,7 +84,7 @@ public class ProfileRepository : IProfileRepository
                              {
                                  Id = new Guid(),
                                  Date = new DateOnly(),
-                                 DayOfWeek = DayOfWeek.Monday,
+                                 DayOfWeek = DayOfWeek.Tuesday,
                                  StartTime = new TimeOnly(),
                                  EndTime = new TimeOnly(),
                              },
@@ -97,7 +92,7 @@ public class ProfileRepository : IProfileRepository
                              {
                                  Id = new Guid(),
                                  Date = new DateOnly(),
-                                 DayOfWeek = DayOfWeek.Monday,
+                                 DayOfWeek = DayOfWeek.Wednesday,
                                  StartTime = new TimeOnly(),
                                  EndTime = new TimeOnly(),
                              },
@@ -105,7 +100,7 @@ public class ProfileRepository : IProfileRepository
                              {
                                  Id = new Guid(),
                                  Date = new DateOnly(),
-                                 DayOfWeek = DayOfWeek.Monday,
+                                 DayOfWeek = DayOfWeek.Thursday,
                                  StartTime = new TimeOnly(),
                                  EndTime = new TimeOnly(),
                              },
@@ -113,7 +108,7 @@ public class ProfileRepository : IProfileRepository
                              {
                                  Id = new Guid(),
                                  Date = new DateOnly(),
-                                 DayOfWeek = DayOfWeek.Monday,
+                                 DayOfWeek = DayOfWeek.Friday,
                                  StartTime = new TimeOnly(),
                                  EndTime = new TimeOnly(),
                              }
@@ -146,7 +141,7 @@ public class ProfileRepository : IProfileRepository
                             ContactsId = new Guid(),
                         },
                         Name = "DivisionName",
-                       
+
                     },
                     Subdivision = new Subdivision
                     {
@@ -160,11 +155,17 @@ public class ProfileRepository : IProfileRepository
                     Team = new Team
                     {
                         Id = new Guid(),
-                        ProjectId = new Guid(),
                         SubdivisionId = new Guid(),
                         Name = "TeamName",
                     },
-                    Role = RoleInProject.BackendDeveloper
+                    Role = RoleInProject.BackendDeveloper,
+                    ProjectId= new Guid(),
+                    Project = new Project()
+                    {
+                        Id = new Guid(),
+                        Name = "FunneyCode",
+                        Description = "Description"
+                    }
                 },
 
             },
@@ -271,18 +272,24 @@ public class ProfileRepository : IProfileRepository
                     Team = new Team
                     {
                         Id = new Guid(),
-                        ProjectId = new Guid(),
                         SubdivisionId = new Guid(),
                         Name = "TeamName",
                     },
-                    Role = RoleInProject.BackendDeveloper
+                    Role = RoleInProject.BackendDeveloper,
+                    ProjectId= new Guid(),
+                    Project = new Project()
+                    {
+                        Id = new Guid(),
+                        Name = "For-A-Donation",
+                        Description = "Description"
+                    }
                 },
 
             },
 
             new UserProfile()
             {
-                Name = "Mike",
+                Name = "George",
                 BirthDate = new DateOnly(),
                 Id = new Guid(),
                 Contacts = new Contacts
@@ -382,25 +389,21 @@ public class ProfileRepository : IProfileRepository
                     Team = new Team
                     {
                         Id = new Guid(),
-                        ProjectId = new Guid(),
                         SubdivisionId = new Guid(),
                         Name = "TeamName",
                     },
-                    Role = RoleInProject.BackendDeveloper
+                    Role = RoleInProject.BackendDeveloper,
+                    ProjectId= new Guid(),
+                    Project = new Project()
+                    {
+                        Id = new Guid(),
+                        Name = "E-commerce system",
+                        Description = "Description"
+                    }
                 },
 
             },
         };
-    }
-
-    public System.Threading.Tasks.Task RemoveAsync(UserProfile entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    public System.Threading.Tasks.Task UpdateAsync(UserProfile entity)
-    {
-        throw new NotImplementedException();
     }
 
     protected virtual void Dispose(bool disposing)
