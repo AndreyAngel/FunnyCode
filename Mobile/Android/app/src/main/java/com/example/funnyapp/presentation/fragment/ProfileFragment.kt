@@ -72,20 +72,20 @@ class ProfileFragment : Fragment(), ProfileSphereAdapter.OnClickListener, Leader
             result.onSuccess {
                 textProfileName.text = it.name
                 imagePerson.setImageResource(R.drawable.ic_man)
-                textWorkSphere.text = requireActivity().resources.getStringArray(R.array.posts)[it.workSpace.role.ordinal]
-                val vacationDate = it.currentVacation.endData
+                textWorkSphere.text = requireActivity().resources.getStringArray(R.array.posts)[it.workSpace.role]
                 val schedules = it.schedule.schedules
                 var calendarDays = ""
                 schedules.forEach { sc ->
                     calendarDays += requireActivity().resources.getStringArray(R.array.week)[sc.dayOfWeek]
                     calendarDays += ", "
                 }
+                val vacationInfo = if (it.currentVacation == null) "Нет договоренности" else "До ${it.currentVacation!!.endData}"
                 profileSpheresAdapter.submitList(
                     listOf(
                         ProfileSphere("Проекты", it.countProjects.toString()),
                         ProfileSphere("Задачи", it.countTasks.toString()),
                         ProfileSphere("Команда", it.countTeamUsers.toString()),
-                        ProfileSphere("Отпуск", "До ${vacationDate.day}/${vacationDate.month}/${vacationDate.year}"),
+                        ProfileSphere("Отпуск", vacationInfo),
                         ProfileSphere("Календарь занятости", "Занят в $calendarDays"),
                         ProfileSphere("Зарплата", "125k"),
                         ProfileSphere("Ближайшая выплата", "20 июня")

@@ -4,8 +4,8 @@ data class WorkSpace(
     val division: ProfileDivision,
     val subdivision: String,
     val teamId: String,
-    val jobTitle: JobTitle,
-    val role: RoleInProject,
+    val jobTitle: Int,
+    val role: Int,
     val workAddress: WorkAddress,
     val remotely: Boolean
 )

@@ -13,7 +13,7 @@ val appModule = module {
     }
 
     viewModel {
-        SearchViewModel()
+        SearchViewModel(userRepository = get())
     }
 
     viewModel {

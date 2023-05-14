@@ -54,11 +54,11 @@ interface MainApiService {
     @GET("/api/Profile/GetById/{id}")
     fun getProfileById(@Path("id") id: String): Call<User>
 
-    @POST("/api/Profile/GetByFilters")
-    fun getProfileByFilters(request: GetProfileByFiltersParam): Call<List<Users>>
+    @GET("/api/Profile/GetByName/{name}")
+    fun getProfileByName(@Path("name") name: String): Call<List<Users>>
 
-    @PUT("api/Profile/Update/{id}")
-    fun updateProfileById(@Path("id") id: String): Call<Unit>
+    @POST("/api/Profile/GetByFilters")
+    fun getProfileByFilters(request: GetProfileByFiltersParam): Call<List<User>>
 
     /**
      * Project Requests

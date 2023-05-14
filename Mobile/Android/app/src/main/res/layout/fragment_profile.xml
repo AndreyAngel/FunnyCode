@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/inter_medium"
-            android:text="Рабочее пространство / экосистема"
+            android:text="Рабочее пространство"
             android:textSize="16sp" />
 
         <androidx.recyclerview.widget.RecyclerView

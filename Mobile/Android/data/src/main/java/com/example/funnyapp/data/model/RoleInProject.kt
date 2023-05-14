@@ -9,5 +9,5 @@ enum class RoleInProject {
     DevOps,
     Manager,
     Analyst,
-    Courier
+    DepartmentLeader
 }

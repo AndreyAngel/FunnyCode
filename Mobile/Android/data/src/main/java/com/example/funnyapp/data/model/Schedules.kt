@@ -1,8 +1,8 @@
 package com.example.funnyapp.data.model
 
 data class Schedules(
-    val date: Date,
+    val date: String,
     val dayOfWeek: Int,
-    val startTime: Time,
-    val endTime: Time,
+    val startTime: String,
+    val endTime: String,
 )

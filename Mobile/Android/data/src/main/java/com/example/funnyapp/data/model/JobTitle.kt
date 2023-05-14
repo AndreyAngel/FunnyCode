@@ -9,5 +9,5 @@ enum class JobTitle {
     DevOps,
     Manager,
     Analyst,
-    Courier
+    DepartmentLeader
 }

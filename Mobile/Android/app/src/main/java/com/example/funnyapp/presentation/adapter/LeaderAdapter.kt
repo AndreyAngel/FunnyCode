@@ -29,7 +29,7 @@ class LeaderAdapter(private val listener: OnClickListener) : ListAdapter<Leader,
             leaderItem = item
 
             textPersonName.text = item.name
-            textPersonPost.text = itemView.context.resources.getStringArray(R.array.posts)[item.jobTitle.ordinal]
+            textPersonPost.text = itemView.context.resources.getStringArray(R.array.posts)[item.jobTitle]
         }
     }
 

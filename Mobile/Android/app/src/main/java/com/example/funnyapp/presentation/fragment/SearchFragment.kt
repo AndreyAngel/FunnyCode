@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.funnyapp.R
+import com.example.funnyapp.data.extension.onSuccess
 import com.example.funnyapp.databinding.FragmentSearchBinding
 import com.example.funnyapp.model.Personnel
 import com.example.funnyapp.presentation.ProfileBottomSheet
@@ -43,6 +45,15 @@ class SearchFragment : Fragment(), PersonnelAdapter.OnClickListener {
         listEmployees.apply {
             layoutManager = LinearLayoutManager(requireActivity())
             adapter = employeesAdapter
+        }
+
+        searchViewModel.searchList.observe(viewLifecycleOwner) { result ->
+            result.onSuccess {
+                searchViewModel.getPersonnelFromSearchList(
+                    it,
+                    requireActivity().resources.getStringArray(R.array.posts)
+                )
+            }
         }
 
         searchViewModel.managersList.observe(viewLifecycleOwner) {

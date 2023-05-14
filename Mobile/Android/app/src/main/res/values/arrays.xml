@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="posts">
-        <item>Blockchain-разработчик</item>
-        <item>Дизайнер</item>
         <item>Backend-разработчик</item>
         <item>Frontend-разработчик</item>
+        <item>Android-разработчик</item>
+        <item>iOS-разработчик</item>
+        <item>Тестировщик</item>
+        <item>DevOps-инженер</item>
+        <item>Менеджер</item>
+        <item>Аналитик</item>
+        <item>Руководитель отдела</item>
     </string-array>
 
     <string-array name="week">

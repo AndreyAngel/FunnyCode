@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -102,12 +102,25 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBeginChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Написать"
+            android:textColor="#151515"
+            app:backgroundTint="?attr/colorOnPrimary"
+            app:cornerRadius="10dp"
+            app:strokeColor="#151515"
+            app:strokeWidth="1dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/inter_medium"
-            android:text="Рабочее пространство / экосистема"
+            android:text="Рабочее пространство"
             android:textSize="16sp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -161,4 +174,4 @@
             android:background="@drawable/border_gradient" />
 
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
