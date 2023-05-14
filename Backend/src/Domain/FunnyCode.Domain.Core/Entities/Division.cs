@@ -17,4 +17,9 @@ public class Division : BaseEntity
     public List<UserProfile> Users { get; set; } = new();
 
     public List<Project> Projects { get; set; } = new();
+
+    public override string ToString()
+    {
+        return Name;
+    }
 }

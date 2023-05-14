@@ -19,28 +19,25 @@ public class ProfileRepository : IProfileRepository
         return new List<UserProfile>()
         {
             new UserProfile()
-            { 
-                Name = "Mike",
-                Id = Guid.NewGuid(),
-                WorkSpaceId = Guid.NewGuid(),
-                ContactsId = Guid.NewGuid(),
-                               
-            },
-            new UserProfile()
             {
-                Name = "John",
-                Id = Guid.NewGuid(),
-                WorkSpaceId = Guid.NewGuid(),
-                ContactsId = Guid.NewGuid(),
-
+                Name = "Mike",
+                Id = new Guid(),
+                WorkSpaceId = new Guid(),
+                ContactsId = new Guid(),
             },
             new UserProfile()
             {
                 Name = "Andrey",
-                Id = Guid.NewGuid(),
-                WorkSpaceId = Guid.NewGuid(),
-                ContactsId = Guid.NewGuid(),
-
+                Id = new Guid(),
+                WorkSpaceId = new Guid(),
+                ContactsId = new Guid(),
+            },
+            new UserProfile()
+            {
+                Name = "Jorge",
+                Id = new Guid(),
+                WorkSpaceId = new Guid(),
+                ContactsId = new Guid(),
             }
 
         };
@@ -50,10 +47,10 @@ public class ProfileRepository : IProfileRepository
     {
         return new UserProfile()
         {
-            Name = "Mike",
-            Id = Guid.NewGuid(),
-            WorkSpaceId = Guid.NewGuid(),
-            ContactsId = Guid.NewGuid()
+            Name = "Andrey",
+            Id = new Guid(),
+            WorkSpaceId = new Guid(),
+            ContactsId = new Guid(),
         };
     }
 
@@ -65,23 +62,69 @@ public class ProfileRepository : IProfileRepository
             {
                 Name = "Mike",
                 BirthDate = new DateOnly(),
+                Id = new Guid(),
                 Contacts = new Contacts
                 {
-                    Email = "",
+                    Email = "samokat.tech@samokat.tech",
                     Id = new Guid(),
-                    MobilePhoneNumber = "",
-                    RocketChatLogin = "",
-                    WorkPhoneNumber = ""
+                    MobilePhoneNumber = "8-800-555-35-35",
+                    RocketChatLogin = "Login",
+                    WorkPhoneNumber = "6823-331-112"
                 },
                 ContactsId = new Guid(),
-                Id = new Guid(),
-                Schedule = new Schedule{Id = new Guid(),Schedules = null},
+                Schedule = new Schedule
+                    {
+                        Id = new Guid(),
+                        Schedules = new List<WorkDay>()
+                        {
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             }
+                        }
+                    },
                 ScheduleId = new Guid(),
                 WorkSpaceId= new Guid(),
                 WorkSpace=new WorkSpace
                 {
                     Id = new Guid(),
-                    Address = new Address
+                    WorkAddress = new Address
                     {
                         Id= new Guid(),
                         City = "City",
@@ -91,10 +134,17 @@ public class ProfileRepository : IProfileRepository
                         Street = "Street"
                     },
                     AddressId= new Guid(),
-                    Division = new Division { 
+                    Division = new Division {
                         Id = new Guid(),
                         Description="",
-                        LeaderId= new Guid(),
+                        LeaderId = new Guid(),
+                        Leader = new UserProfile()
+                        {
+                            Name = "Andrey",
+                            Id = new Guid(),
+                            WorkSpaceId = new Guid(),
+                            ContactsId = new Guid(),
+                        },
                         Name = "DivisionName",
                        
                     },
@@ -113,32 +163,79 @@ public class ProfileRepository : IProfileRepository
                         ProjectId = new Guid(),
                         SubdivisionId = new Guid(),
                         Name = "TeamName",
-                    }
-                    
+                    },
+                    Role = RoleInProject.BackendDeveloper
                 },
 
             },
+
             new UserProfile()
             {
                 Name = "Mike",
                 BirthDate = new DateOnly(),
+                Id = new Guid(),
                 Contacts = new Contacts
                 {
-                    Email = "",
+                    Email = "samokat.tech@samokat.tech",
                     Id = new Guid(),
-                    MobilePhoneNumber = "",
-                    RocketChatLogin = "",
-                    WorkPhoneNumber = ""
+                    MobilePhoneNumber = "8-800-555-35-35",
+                    RocketChatLogin = "Login",
+                    WorkPhoneNumber = "6823-331-112"
                 },
                 ContactsId = new Guid(),
-                Id = new Guid(),
-                Schedule = new Schedule{Id = new Guid(),Schedules = null},
+                Schedule = new Schedule
+                    {
+                        Id = new Guid(),
+                        Schedules = new List<WorkDay>()
+                        {
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             }
+                        }
+                    },
                 ScheduleId = new Guid(),
                 WorkSpaceId= new Guid(),
                 WorkSpace=new WorkSpace
                 {
                     Id = new Guid(),
-                    Address = new Address
+                    WorkAddress = new Address
                     {
                         Id= new Guid(),
                         City = "City",
@@ -149,16 +246,16 @@ public class ProfileRepository : IProfileRepository
                     },
                     AddressId= new Guid(),
                     Division = new Division {
-                        Id = new Guid(),Description="",
+                        Id = new Guid(),
+                        Description="",
+                        LeaderId = new Guid(),
                         Leader = new UserProfile()
                         {
-                            Name = "John",
-                            ContactsId = new Guid(),
-                            WorkSpaceId = new Guid(),
+                            Name = "Andrey",
                             Id = new Guid(),
-                            ScheduleId = new Guid()
+                            WorkSpaceId = new Guid(),
+                            ContactsId = new Guid(),
                         },
-                        LeaderId= new Guid(),
                         Name = "DivisionName",
 
                     },
@@ -177,32 +274,79 @@ public class ProfileRepository : IProfileRepository
                         ProjectId = new Guid(),
                         SubdivisionId = new Guid(),
                         Name = "TeamName",
-                    }
-
+                    },
+                    Role = RoleInProject.BackendDeveloper
                 },
 
             },
+
             new UserProfile()
             {
                 Name = "Mike",
                 BirthDate = new DateOnly(),
+                Id = new Guid(),
                 Contacts = new Contacts
                 {
-                    Email = "",
+                    Email = "samokat.tech@samokat.tech",
                     Id = new Guid(),
-                    MobilePhoneNumber = "",
-                    RocketChatLogin = "",
-                    WorkPhoneNumber = ""
+                    MobilePhoneNumber = "8-800-555-35-35",
+                    RocketChatLogin = "Login",
+                    WorkPhoneNumber = "6823-331-112"
                 },
                 ContactsId = new Guid(),
-                Id = new Guid(),
-                Schedule = new Schedule{Id = new Guid(),Schedules = null},
+                Schedule = new Schedule
+                    {
+                        Id = new Guid(),
+                        Schedules = new List<WorkDay>()
+                        {
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             },
+                             new WorkDay()
+                             {
+                                 Id = new Guid(),
+                                 Date = new DateOnly(),
+                                 DayOfWeek = DayOfWeek.Monday,
+                                 StartTime = new TimeOnly(),
+                                 EndTime = new TimeOnly(),
+                             }
+                        }
+                    },
                 ScheduleId = new Guid(),
                 WorkSpaceId= new Guid(),
                 WorkSpace=new WorkSpace
                 {
                     Id = new Guid(),
-                    Address = new Address
+                    WorkAddress = new Address
                     {
                         Id= new Guid(),
                         City = "City",
@@ -213,16 +357,16 @@ public class ProfileRepository : IProfileRepository
                     },
                     AddressId= new Guid(),
                     Division = new Division {
-                        Id = new Guid(),Description="",
+                        Id = new Guid(),
+                        Description="",
+                        LeaderId = new Guid(),
                         Leader = new UserProfile()
                         {
-                            Name = "John",
-                            ContactsId = new Guid(),
-                            WorkSpaceId = new Guid(),
+                            Name = "Andrey",
                             Id = new Guid(),
-                            ScheduleId = new Guid()
+                            WorkSpaceId = new Guid(),
+                            ContactsId = new Guid(),
                         },
-                        LeaderId= new Guid(),
                         Name = "DivisionName",
 
                     },
@@ -242,12 +386,10 @@ public class ProfileRepository : IProfileRepository
                         SubdivisionId = new Guid(),
                         Name = "TeamName",
                     },
-                    TeamId= new Guid(),  
-
+                    Role = RoleInProject.BackendDeveloper
                 },
 
             },
-
         };
     }
 

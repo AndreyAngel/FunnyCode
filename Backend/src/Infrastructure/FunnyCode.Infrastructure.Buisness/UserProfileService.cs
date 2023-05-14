@@ -58,7 +58,7 @@ public class UserProfileService : IUserProfileService
 
         if (filters.WorkAddress != null)
         {
-            user = user.Where(x => x.WorkSpace.Address == filters.WorkAddress).ToList();
+            user = user.Where(x => x.WorkSpace.WorkAddress == filters.WorkAddress).ToList();
         }
 
         if (filters.JobTitle != null)

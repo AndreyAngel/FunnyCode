@@ -1,4 +1,5 @@
 ﻿namespace FunnyCode.Domain.Core.Entities;
+
 /// <summary>
 /// Specific subdivision entity 
 /// </summary>
@@ -21,4 +22,9 @@ public class Subdivision : BaseEntity
     public List<UserProfile> Users { get; set; } = new();
 
     public List<Project> Projects { get; set; } = new();
+
+    public override string ToString()
+    {
+        return Name;
+    }
 }

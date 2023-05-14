@@ -3,9 +3,11 @@ using FunnyCode.Domain.Core.Entities;
 using FunnyCode.Domain.Core.Enums;
 using FunnyCode.Models.DTO;
 using FunnyCode.Models.DTO.Enums;
+using FunnyCode.Models.DTO.Requests;
 using FunnyCode.Models.DTO.Responses;
 using FunnyCode.Models.DTO.Responses.CompanyStructure;
 using FunnyCode.Models.DTO.Responses.UserProfile;
+using FunnyCode.Services.Interfaces.Models;
 using TaskStatus = FunnyCode.Domain.Core.Enums.TaskStatus;
 
 namespace FunnyCode.Helpers;
@@ -34,6 +36,8 @@ public class MappingProfile : Profile
 
         CreateMap<UserProfile, UserProfileDTOResponse>();
 
+        CreateMap<UsersFilterDTORequest, UserFiltersModel>();
+
         CreateMap<Division, UserProfileDivisionDTOResponse>();
 
         CreateMap<UserProfile, UserProfileListDTOResponse>();
@@ -47,6 +51,8 @@ public class MappingProfile : Profile
         CreateMap<Schedule, ScheduleDTOResponse>();
 
         CreateMap<Vacation, VacationDTOResponse>();
+
+        CreateMap<WorkDay, WorkDayDTOResponse>();
 
         CreateMap<JobTitle, JobTitleDTO>();
 

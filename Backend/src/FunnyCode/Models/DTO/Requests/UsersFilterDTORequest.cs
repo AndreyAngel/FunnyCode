@@ -10,9 +10,9 @@ public class UsersFilterDTORequest
 
     public string? SubdivisionName { get; set; }
 
-    public AddressDTO WorkAddress { get; set; }
+    public AddressDTO? WorkAddress { get; set; }
 
-    public JobTitleDTO JobTitle { get; set; }
+    public JobTitleDTO? JobTitle { get; set; }
 
     public RoleInProjectDTO? RoleInProject { get; set; }
 }

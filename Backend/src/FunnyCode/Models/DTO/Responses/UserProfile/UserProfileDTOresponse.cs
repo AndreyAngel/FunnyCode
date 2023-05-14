@@ -19,9 +19,9 @@ public class UserProfileDTOResponse
 
     public DateOnly NextVacationStartDate { get; set; }
 
-    public int? CountProjects { get; set; }
+    public int CountProjects { get; set; } = 0;
 
-    public int? CountTasks { get; set; }
+    public int CountTasks { get; set; } = 0;
 
-    public int? CountTeamUsers { get; set; }
+    public int CountTeamUsers { get; set; } = 0;
 }

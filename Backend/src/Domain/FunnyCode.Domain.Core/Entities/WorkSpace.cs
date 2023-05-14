@@ -8,7 +8,7 @@ public class WorkSpace : BaseEntity
 {
     public Guid AddressId { get; set; }
 
-    public Address? Address { get; set; }
+    public Address? WorkAddress { get; set; }
 
     public Guid DivisionId { get; set; }
 
