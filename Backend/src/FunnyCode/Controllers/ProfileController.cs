@@ -65,7 +65,7 @@ public class ProfileController : ControllerBase
         try
         {
             var result = _userProfileService.GetByName(name);
-            var response = _mapper.Map<UserProfileDTOResponse>(result);
+            var response = _mapper.Map<List<UserProfileListDTOResponse>>(result);
 
             return Ok(response);
         }

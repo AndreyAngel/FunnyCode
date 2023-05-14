@@ -22,7 +22,7 @@ public class UserProfileService : IUserProfileService
         var user = _db.Profiles.Include(x => x.Contacts,
                                         x => x.WorkSpace,
                                         x => x.Schedule,
-                                        x => x.Vacations).SingleOrDefault(x => x.Id == id);
+                                        x => x.Vacations).FirstOrDefault(x => x.Id == id);
 
         if (user == null)
         {

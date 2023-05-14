@@ -1,5 +1,5 @@
 ﻿namespace FunnyCode.Domain.Core.Enums;
 
-public class TaskStatus
+public enum TaskStatus
 {
 }

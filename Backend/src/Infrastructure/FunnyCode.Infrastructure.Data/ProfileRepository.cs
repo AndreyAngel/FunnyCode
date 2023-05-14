@@ -92,7 +92,8 @@ public class ProfileRepository : IProfileRepository
                     },
                     AddressId= new Guid(),
                     Division = new Division { 
-                        Id = new Guid(),Description="",
+                        Id = new Guid(),
+                        Description="",
                         LeaderId= new Guid(),
                         Name = "DivisionName",
                        
