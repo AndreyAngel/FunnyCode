@@ -22,7 +22,7 @@ public class UserProfileService : IUserProfileService
         var user = _db.Profiles.Include(x => x.Contacts,
                                         x => x.WorkSpace,
                                         x => x.Schedule,
-                                        x => x.Vacations).SingleOrDefault(x => x.Id == id);
+                                        x => x.Vacations).FirstOrDefault(x => x.Id == id);
 
         if (user == null)
         {
@@ -58,7 +58,7 @@ public class UserProfileService : IUserProfileService
 
         if (filters.WorkAddress != null)
         {
-            user = user.Where(x => x.WorkSpace.Address == filters.WorkAddress).ToList();
+            user = user.Where(x => x.WorkSpace.WorkAddress == filters.WorkAddress).ToList();
         }
 
         if (filters.JobTitle != null)
