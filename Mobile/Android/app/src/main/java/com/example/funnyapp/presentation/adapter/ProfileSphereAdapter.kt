@@ -9,33 +9,37 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.funnyapp.R
 import com.example.funnyapp.data.model.response.Divisions
 import com.example.funnyapp.databinding.ItemProfileSphereBinding
+import com.example.funnyapp.model.ProfileSphere
 
-class ProfileSphereAdapter(private val listener: OnClickListener) : ListAdapter<Divisions, ProfileSphereAdapter.Holder>(Comparator()) {
+class ProfileSphereAdapter(private val listener: OnClickListener) : ListAdapter<ProfileSphere, ProfileSphereAdapter.Holder>(Comparator()) {
     interface OnClickListener {
-        fun onProfileSphereClick(item: Divisions)
+        fun onProfileSphereClick(item: ProfileSphere)
     }
 
     class Holder(itemView: View, listener: OnClickListener) : ViewHolder(itemView) {
         private val binding = ItemProfileSphereBinding.bind(itemView)
-        private lateinit var divisionItem: Divisions
+        private lateinit var sphereItem: ProfileSphere
 
         init {
             binding.root.setOnClickListener {
-                listener.onProfileSphereClick(item = divisionItem)
+                listener.onProfileSphereClick(item = sphereItem)
             }
         }
 
-        fun bind(item: Divisions) {
-            divisionItem = item
+        fun bind(item: ProfileSphere) = with(binding) {
+            sphereItem = item
+
+            textProfileSphere.text = item.sphereName
+            textSphereData.text = item.sphereData
         }
     }
 
-    class Comparator : DiffUtil.ItemCallback<Divisions>() {
-        override fun areItemsTheSame(oldItem: Divisions, newItem: Divisions): Boolean {
-            return oldItem.id == newItem.id
+    class Comparator : DiffUtil.ItemCallback<ProfileSphere>() {
+        override fun areItemsTheSame(oldItem: ProfileSphere, newItem: ProfileSphere): Boolean {
+            return oldItem.sphereName == newItem.sphereName
         }
 
-        override fun areContentsTheSame(oldItem: Divisions, newItem: Divisions): Boolean {
+        override fun areContentsTheSame(oldItem: ProfileSphere, newItem: ProfileSphere): Boolean {
             return oldItem == newItem
         }
     }

@@ -10,9 +10,12 @@ import com.example.funnyapp.data.model.WorkSpace
 data class User(
     val name: String,
     val birthDate: BirthDate,
-    val contact: Contact,
+    val contacts: Contact,
     val workSpace: WorkSpace,
     val schedule: Schedule,
     val currentVacation: Vacation,
-    val nextVacationStartDate: Date
+    val nextVacationStartDate: Date,
+    val countProjects: Int,
+    val countTasks: Int,
+    val countTeamUsers: Int
 )

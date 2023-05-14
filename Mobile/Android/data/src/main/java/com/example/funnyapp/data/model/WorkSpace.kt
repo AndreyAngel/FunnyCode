@@ -1,7 +1,7 @@
 package com.example.funnyapp.data.model
 
 data class WorkSpace(
-    val division: String,
+    val division: ProfileDivision,
     val subdivision: String,
     val teamId: String,
     val jobTitle: JobTitle,
