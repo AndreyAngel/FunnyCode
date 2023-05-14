@@ -1,5 +1,5 @@
 package com.example.funnyapp.data.model.request
 
-data class GetSubdivisionsByIdParam(
+data class GetSubdivisionsParam(
     val divisionId: String
 )

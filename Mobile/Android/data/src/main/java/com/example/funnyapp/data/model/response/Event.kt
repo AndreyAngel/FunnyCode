@@ -6,6 +6,6 @@ data class Event(
     val Description: String,
     val Date: String,
     val Location: String,
-    val Subdivisions: List<Subdivision>,
-    val Divisions: List<Division>
+    val Subdivisions: List<Subdivisions>,
+    val Divisions: List<Divisions>
 )

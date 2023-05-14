@@ -7,16 +7,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.funnyapp.databinding.FragmentSearchBinding
+import com.example.funnyapp.model.Personnel
+import com.example.funnyapp.presentation.ProfileBottomSheet
 import com.example.funnyapp.presentation.adapter.PersonnelAdapter
 import com.example.funnyapp.presentation.vm.SearchViewModel
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 
-class SearchFragment : Fragment() {
+class SearchFragment : Fragment(), PersonnelAdapter.OnClickListener {
     private lateinit var binding: FragmentSearchBinding
     private val searchViewModel by activityViewModel<SearchViewModel>()
-    private val managersAdapter by lazy { PersonnelAdapter() }
-    private val employeesAdapter by lazy { PersonnelAdapter() }
+    private val managersAdapter by lazy { PersonnelAdapter(this) }
+    private val employeesAdapter by lazy { PersonnelAdapter(this) }
 
     companion object {
         @JvmStatic
@@ -50,5 +52,10 @@ class SearchFragment : Fragment() {
         searchViewModel.employeesList.observe(viewLifecycleOwner) {
             employeesAdapter.submitList(it)
         }
+    }
+
+    override fun onPersonnelClick(item: Personnel) {
+        val modalBottomSheet = ProfileBottomSheet()
+        modalBottomSheet.show(requireActivity().supportFragmentManager, ProfileBottomSheet.TAG)
     }
 }

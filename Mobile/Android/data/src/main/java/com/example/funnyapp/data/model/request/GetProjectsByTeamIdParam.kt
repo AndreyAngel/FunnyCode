@@ -1,5 +1,5 @@
 package com.example.funnyapp.data.model.request
 
-data class GetProjectByTeamIdParam(
+data class GetProjectsByTeamIdParam(
     val teamId: String
 )
