@@ -12,7 +12,7 @@ public class UsersFilterDTORequest
 
     public AddressDTO WorkAddress { get; set; }
 
-    public JobTitle JobTitle { get; set; }
+    public JobTitleDTO JobTitle { get; set; }
 
-    public RoleInProject? RoleInProject { get; set; }
+    public RoleInProjectDTO? RoleInProject { get; set; }
 }

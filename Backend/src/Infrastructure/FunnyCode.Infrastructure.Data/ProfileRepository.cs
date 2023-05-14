@@ -93,14 +93,6 @@ public class ProfileRepository : IProfileRepository
                     AddressId= new Guid(),
                     Division = new Division { 
                         Id = new Guid(),Description="",
-                        Leader = new UserProfile()
-                        {
-                            Name = "John",
-                            ContactsId = new Guid(),
-                            WorkSpaceId = new Guid(),
-                            Id = new Guid(),
-                            ScheduleId = new Guid()
-                        },
                         LeaderId= new Guid(),
                         Name = "DivisionName",
                        

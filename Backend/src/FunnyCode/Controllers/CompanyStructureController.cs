@@ -3,7 +3,6 @@ using FunnyCode.Models.DTO.Responses;
 using FunnyCode.Models.DTO.Responses.CompanyStructure;
 using FunnyCode.Services.Interfaces;
 using FunnyCode.Services.Interfaces.Exceptions;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 

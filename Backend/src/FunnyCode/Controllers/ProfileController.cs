@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using FunnyCode.Models.DTO.Requests;
-using FunnyCode.Models.DTO.Responses.Project;
 using FunnyCode.Models.DTO.Responses.UserProfile;
 using FunnyCode.Services.Interfaces;
 using FunnyCode.Services.Interfaces.Exceptions;
@@ -12,7 +11,7 @@ namespace FunnyCode.Controllers;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
-public class ProfileController: ControllerBase
+public class ProfileController : ControllerBase
 {
     private readonly IUserProfileService _userProfileService;
 
@@ -23,6 +22,7 @@ public class ProfileController: ControllerBase
         _userProfileService = userProfileService;
         _mapper = mapper;
     }
+
     /// <summary>
     /// Get User Profile by Id
     /// </summary>
@@ -30,7 +30,7 @@ public class ProfileController: ControllerBase
     /// <returns></returns>
     /// <response code="200"> Successful completion </response>
     /// <response code="401"> Unauthorized </response>
-    /// <response code="404"> Division with this Id wasn't founded </response>
+    /// <response code="404"> User profile with this Id wasn't founded </response>
     [HttpGet("{id:Guid}")]
     [ProducesResponseType(typeof(UserProfileDTOResponse), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
@@ -38,7 +38,7 @@ public class ProfileController: ControllerBase
     {
         try
         {
-            var  result = _userProfileService.GetById(id);
+            var result = _userProfileService.GetById(id);
             var response = _mapper.Map<UserProfileDTOResponse>(result);
 
             return Ok(response);
@@ -48,6 +48,7 @@ public class ProfileController: ControllerBase
             return NotFound(ex.Message);
         }
     }
+
     /// <summary>
     /// Get User Profile by name
     /// </summary>
@@ -55,7 +56,7 @@ public class ProfileController: ControllerBase
     /// <returns></returns>
     /// <response code="200"> Successful completion </response>
     /// <response code="401"> Unauthorized </response>
-    /// <response code="404"> Division with this name wasn't founded </response>
+    /// <response code="404"> User profile with this name wasn't founded </response>
     [HttpGet("{name}")]
     [ProducesResponseType(typeof(UserProfileDTOResponse), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
@@ -73,6 +74,7 @@ public class ProfileController: ControllerBase
             return NotFound(ex.Message);
         }
     }
+
     /// <summary>
     /// Get User Profiles by filters
     /// </summary>
@@ -81,7 +83,7 @@ public class ProfileController: ControllerBase
     /// <response code="200"> Successful completion </response>
     /// <response code="401"> Unauthorized </response>
     [HttpPost]
-    [ProducesResponseType(typeof(List<UserProfileListDTOResponse>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(UserProfileDTOResponse), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
     public IActionResult GetByFilters(UsersFilterDTORequest request)
     {
@@ -97,11 +99,5 @@ public class ProfileController: ControllerBase
         {
             return NotFound(ex.Message);
         }
-    }
-
-    [HttpPut("{id:Guid}")]
-    public IActionResult Update(Guid id)
-    {
-        throw new NotImplementedException();
     }
 }

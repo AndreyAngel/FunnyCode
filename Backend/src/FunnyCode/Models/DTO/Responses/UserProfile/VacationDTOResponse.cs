@@ -10,7 +10,7 @@ public class VacationDTOResponse
 
     public DateOnly? EndData { get; set; }
 
-    public VacationType Type { get; set; }
+    public VacationTypeDTO Type { get; set; }
 
     /// <summary>
     /// Контакты заместителя

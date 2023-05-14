@@ -4,6 +4,7 @@
 /// </summary>
 public class Address : BaseEntity
 {
+    // TODO: Изменить метод
     public string Region { get; set; }
 
     public string City { get; set; }

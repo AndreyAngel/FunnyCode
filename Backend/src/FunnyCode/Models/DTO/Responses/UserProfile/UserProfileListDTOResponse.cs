@@ -1,4 +1,4 @@
-﻿using FunnyCode.Models.DTO.Responses;
+﻿using FunnyCode.Models.DTO.Enums;
 
 namespace FunnyCode.Models.DTO.Responses.UserProfile;
 
@@ -8,4 +8,6 @@ namespace FunnyCode.Models.DTO.Responses.UserProfile;
 public class UserProfileListDTOResponse : BaseEntityDTOResponse
 {
     public string Name { get; set; }
+
+    public JobTitleDTO JobTitle { get; set; }
 }
