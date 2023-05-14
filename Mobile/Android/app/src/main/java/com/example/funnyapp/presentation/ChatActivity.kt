@@ -46,6 +46,7 @@ class ChatActivity : AppCompatActivity() {
         buttonSendMessage.setOnClickListener {
             if (editTextMessage.text.isEmpty()) return@setOnClickListener
 
+
             chatViewModel.sendMessage(editTextMessage.text.toString())
         }
 

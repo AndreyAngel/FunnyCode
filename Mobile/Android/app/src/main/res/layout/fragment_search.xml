@@ -15,11 +15,14 @@
         tools:context=".presentation.fragment.SearchFragment">
 
         <TextView
+            android:id="@+id/textLeaders"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:fontFamily="@font/manrope_regular"
             android:text="Руководители"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listManagers"
@@ -28,12 +31,15 @@
             android:layout_marginTop="8dp" />
 
         <TextView
+            android:id="@+id/textEmployees"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/manrope_regular"
             android:text="Сотрудники"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listEmployees"

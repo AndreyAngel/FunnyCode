@@ -8,9 +8,11 @@ import com.example.funnyapp.databinding.ActivityMainBinding
 import com.example.funnyapp.presentation.fragment.ChatsFragment
 import com.example.funnyapp.presentation.fragment.EmployeeFragment
 import com.example.funnyapp.presentation.fragment.ProfileFragment
+import com.example.funnyapp.presentation.fragment.StructureFragment
 
 class MainActivity : AppCompatActivity() {
     private val fragmentManager by lazy { supportFragmentManager }
+    private val structureFragment by lazy { StructureFragment.newInstance() }
     private val chatsFragment by lazy { ChatsFragment.newInstance() }
     private val employeeFragment by lazy { EmployeeFragment.newInstance() }
     private val profileFragment by lazy { ProfileFragment.newInstance() }
@@ -25,12 +27,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() = with(binding) {
-        activeFragment = employeeFragment
+        activeFragment = structureFragment
+        openFragment(activeFragment)
 
         navMain.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.navMain -> {
-                    return@setOnItemSelectedListener false
+                R.id.navStructure -> {
+                    openFragment(structureFragment)
+                    return@setOnItemSelectedListener true
                 }
                 R.id.navChats -> {
                     openFragment(chatsFragment)

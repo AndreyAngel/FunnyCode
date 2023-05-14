@@ -76,10 +76,10 @@ class ProfileFragment : Fragment(), ProfileSphereAdapter.OnClickListener, Leader
                 val schedules = it.schedule.schedules
                 var calendarDays = ""
                 schedules.forEach { sc ->
-                    calendarDays += requireActivity().resources.getStringArray(R.array.week)[sc.dayOfWeek]
+                    calendarDays += requireActivity().resources.getStringArray(R.array.week)[sc.dayOfWeek - 1]
                     calendarDays += ", "
                 }
-                val vacationInfo = if (it.currentVacation == null) "Нет договоренности" else "До ${it.currentVacation!!.endData}"
+                val vacationInfo = if (it.currentVacation == null) "Нет скоро" else "До ${it.currentVacation!!.endData}"
                 profileSpheresAdapter.submitList(
                     listOf(
                         ProfileSphere("Проекты", it.countProjects.toString()),

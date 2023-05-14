@@ -5,11 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.funnyapp.R
 import com.example.funnyapp.databinding.FragmentFavoritesBinding
+import com.example.funnyapp.model.Personnel
+import com.example.funnyapp.presentation.ProfileBottomSheet
+import com.example.funnyapp.presentation.adapter.PersonnelAdapter
 
-class FavoritesFragment : Fragment() {
+class FavoritesFragment : Fragment(), PersonnelAdapter.OnClickListener {
     private lateinit var binding: FragmentFavoritesBinding
+    private val employeesAdapter by lazy { PersonnelAdapter(this) }
 
     companion object {
         @JvmStatic
@@ -27,6 +32,14 @@ class FavoritesFragment : Fragment() {
     }
 
     private fun initView() = with(binding) {
+        listEmployees.apply {
+            layoutManager = LinearLayoutManager(requireActivity())
+            adapter = employeesAdapter
+        }
+    }
 
+    override fun onPersonnelClick(item: Personnel) {
+        val modalBottomSheet = ProfileBottomSheet()
+        modalBottomSheet.show(requireActivity().supportFragmentManager, ProfileBottomSheet.TAG)
     }
 }

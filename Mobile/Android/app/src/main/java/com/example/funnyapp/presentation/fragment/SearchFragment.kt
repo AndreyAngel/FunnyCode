@@ -57,10 +57,14 @@ class SearchFragment : Fragment(), PersonnelAdapter.OnClickListener {
         }
 
         searchViewModel.managersList.observe(viewLifecycleOwner) {
+            if (it.isNotEmpty()) textLeaders.visibility = View.VISIBLE
+            else textLeaders.visibility = View.GONE
             managersAdapter.submitList(it)
         }
 
         searchViewModel.employeesList.observe(viewLifecycleOwner) {
+            if (it.isNotEmpty()) textEmployees.visibility = View.VISIBLE
+            else textEmployees.visibility = View.GONE
             employeesAdapter.submitList(it)
         }
     }
