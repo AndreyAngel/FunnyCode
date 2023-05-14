@@ -1,20 +1,12 @@
 ﻿using FunnyCode.Domain.Core.Entities;
 using FunnyCode.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
+namespace FunnyCode.Infrastructure.Data;
 
 public class SubdivisionRepository: ISubdivisionRepository
 {
     private bool disposedValue;
-
-    public System.Threading.Tasks.Task AddAsync(Subdivision entity)
-    {
-        throw new NotImplementedException();
-    }
 
     public List<Subdivision> GetAll()
     {
@@ -57,8 +49,31 @@ public class SubdivisionRepository: ISubdivisionRepository
             Id = new Guid(),
             Name = "SubdivisionName",
             Description = "Description",
-            DivisionId = new Guid(),  
-           
+            DivisionId = new Guid(),
+            Projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        Name = "FunnyCode",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "For-A-Donation",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    },
+                    new Project()
+                    {
+                        Name = "E-commerce system",
+                        Description ="Description",
+                        Id = new Guid()
+
+                    }
+                }
         };
     }
 
@@ -82,7 +97,30 @@ public class SubdivisionRepository: ISubdivisionRepository
                         ScheduleId = new Guid(),
                         WorkSpaceId = new Guid(),
                     },
-                    
+                    Projects = new List<Project>
+                    {
+                        new Project()
+                        {
+                            Name = "FunnyCode",
+                            Description ="Description",
+                            Id = new Guid()
+
+                        },
+                        new Project()
+                        {
+                            Name = "For-A-Donation",
+                            Description ="Description",
+                            Id = new Guid()
+
+                        },
+                        new Project()
+                        {
+                            Name = "E-commerce system",
+                            Description ="Description",
+                            Id = new Guid()
+
+                        }
+                    }
                 },
                 new Subdivision()
                 {
@@ -99,7 +137,30 @@ public class SubdivisionRepository: ISubdivisionRepository
                         ScheduleId = new Guid(),
                         WorkSpaceId = new Guid(),
                     },
+                    Projects = new List<Project>
+                    {
+                        new Project()
+                        {
+                            Name = "FunnyCode",
+                            Description ="Description",
+                            Id = new Guid()
 
+                        },
+                        new Project()
+                        {
+                            Name = "For-A-Donation",
+                            Description ="Description",
+                            Id = new Guid()
+
+                        },
+                        new Project()
+                        {
+                            Name = "E-commerce system",
+                            Description ="Description",
+                            Id = new Guid()
+
+                        }
+                    }
                 },
                 new Subdivision()
                 {
@@ -116,22 +177,34 @@ public class SubdivisionRepository: ISubdivisionRepository
                         ScheduleId = new Guid(),
                         WorkSpaceId = new Guid(),
                     },
+                    Projects = new List<Project>
+                    {
+                        new Project()
+                        {
+                            Name = "FunnyCode",
+                            Description ="Description",
+                            Id = new Guid()
 
-                }
+                        },
+                        new Project()
+                        {
+                            Name = "For-A-Donation",
+                            Description ="Description",
+                            Id = new Guid()
 
+                        },
+                        new Project()
+                        {
+                            Name = "E-commerce system",
+                            Description ="Description",
+                            Id = new Guid()
 
-        };
+                        }
+                    }
+                
+                 }
+            };
         
-    }
-
-    public System.Threading.Tasks.Task RemoveAsync(Subdivision entity)
-    {
-        throw new NotImplementedException();
-    }
-
-    public System.Threading.Tasks.Task UpdateAsync(Subdivision entity)
-    {
-        throw new NotImplementedException();
     }
 
     protected virtual void Dispose(bool disposing)

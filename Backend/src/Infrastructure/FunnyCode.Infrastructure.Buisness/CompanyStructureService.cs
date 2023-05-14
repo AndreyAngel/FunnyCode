@@ -7,6 +7,8 @@ namespace FunnyCode.Infrastructure.Buisness;
 
 public class CompanyStructureService : ICompanyStructureService
 {
+    private bool disposedValue;
+
     private readonly IUnitOfWork _db;
 
     public CompanyStructureService(IUnitOfWork unitOfWork)
@@ -121,5 +123,24 @@ public class CompanyStructureService : ICompanyStructureService
         }
 
         return teams;
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposedValue)
+        {
+            if (disposing)
+            {
+                _db.Dispose();
+            }
+
+            disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
     }
 }

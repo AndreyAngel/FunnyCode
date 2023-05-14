@@ -46,14 +46,14 @@ public class ProjectController : ControllerBase
     /// <response code="401"> Unauthorized </response>
     /// <response code="404"> User profile with this Id wasn't founded </response>
     [HttpGet("{userProfileId:Guid}")]
-    [ProducesResponseType(typeof(List<ProjectListDTOResponse>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(ProjectDTOResponse), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
-    public IActionResult GetProjectsByUserProfileId(Guid userProfileId)
+    public IActionResult GetProjectByUserProfileId(Guid userProfileId)
     {
         try
         {
-            var result = _projectService.GetProjectsByUserProfileId(userProfileId);
-            var response = _mapper.Map<List<ProjectListDTOResponse>>(result);
+            var result = _projectService.GetProjectByUserProfileId(userProfileId);
+            var response = _mapper.Map<ProjectDTOResponse>(result);
 
             return Ok(response);
         }
@@ -74,7 +74,7 @@ public class ProjectController : ControllerBase
     [HttpGet("{teamId:Guid}")]
     [ProducesResponseType(typeof(List<ProjectListDTOResponse>), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
-    public IActionResult GetProjectByTeamId(Guid teamId)
+    public IActionResult GetProjectsByTeamId(Guid teamId)
     {
         try
         {

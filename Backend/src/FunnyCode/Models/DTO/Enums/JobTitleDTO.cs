@@ -46,7 +46,7 @@ public enum JobTitleDTO
     Analystic,
 
     /// <summary>
-    /// Courier
+    /// DepartmentLeader
     /// </summary>
-    Courier
+    DepartmentLeader
 }
